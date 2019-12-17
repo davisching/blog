@@ -18,7 +18,7 @@
     <meta property="og:url" content="http://localhost:2373/ghost-on-github-pages/">
     <meta property="og:image" content="http://localhost:2373/content/images/2019/12/1044930.jpg">
     <meta property="article:published_time" content="2019-12-17T07:30:17.000Z">
-    <meta property="article:modified_time" content="2019-12-17T13:39:19.000Z">
+    <meta property="article:modified_time" content="2019-12-17T14:34:34.000Z">
     <meta property="article:tag" content="自封的首席技术专栏">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
@@ -64,7 +64,7 @@
     "headline": "优雅又庶民地在Github Pages中上线Ghost博客系统 - 壹",
     "url": "http://localhost:2373/ghost-on-github-pages/",
     "datePublished": "2019-12-17T07:30:17.000Z",
-    "dateModified": "2019-12-17T13:39:19.000Z",
+    "dateModified": "2019-12-17T14:34:34.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:2373/content/images/2019/12/1044930.jpg",
@@ -135,24 +135,24 @@
 <h2 id="i1">环境配置</h2>
 <p><strong>安装 <a href="https://www.python.org/download/releases/2.7.2/">Python 2</a></strong></p>
 <p>该软件采用的是 Python 2.x 的环境，因为之后会自动调用的 buster 不支持 3.0+。</p>
-<pre><code class="language-typescript"># Debian-based systems
+<pre><code class="language-java"># Debian-based systems
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
 sudo apt-get install python2.7
 </code></pre>
 <p><strong>安装 <a href="https://docs.ghost.org/docs/supported-node-versions">NodeJS</a></strong></p>
 <p>安装可被 Ghost Blog 支持的 NodeJS 版本，目前官方支持的版本分别为 <strong>8.x</strong>、<strong>10.x（官方推荐）</strong> 与 <strong>12.x</strong>。</p>
-<pre><code class="language-typescript"># Debian-based systems
+<pre><code class="language-java"># Debian-based systems
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 </code></pre>
 <p><strong>安装 <a href="https://nodejs.org/en/">npm</a></strong></p>
-<pre><code class="language-typescript"># Debian-based systems
+<pre><code class="language-java"># Debian-based systems
 sudo apt install npm
 </code></pre>
 <p><strong>安装 <a href="https://brew.sh/index_zh-cn.html">wget</a> (MacOS)</strong></p>
 <p>由于之后自动生成静态文件的过程需要使用 wget 命令，但 MacOS 并没有自带这个功能，需要通过 <a href="https://brew.sh/index_zh-cn.html">homebrew</a> 进行安装。</p>
-<pre><code class="language-typescript"># 安装 homebrew
+<pre><code class="language-java"># 安装 homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # 安装 wget
@@ -170,12 +170,12 @@ brew install wget
 <p>在创建好 repository 之后，你需要记下来该项目 git 的 HTTPS 或 SSH 地址。这里推荐使用 HTTPS，因为这免去了系统一些密钥的配置。大致来说，新项目的 HTTPS 地址格式如下：<code>https://github.com/用户名/新项目名称.git</code>。这个地址很重要，因为运行安装之后，需要填写。</p>
 <h3 id="installsh">运行 install.sh 进行安装</h3>
 <p>在刚刚解压的文件夹打开 terminal，首先需要给予这个文件读写的权限（当然，也可以在 Folder 中右键修改）：</p>
-<pre><code class="language-typescript">chmod +x install.sh
+<pre><code class="language-java">chmod +x install.sh
 sudo sh ./install.sh
 </code></pre>
 <p>而后，软件就会自动开始安装 Ghost 博客到 mac 的 <code>～</code> 目录（ <code>/Users/用户名</code>）中的一个<code>.ghost</code>隐藏文件中。或者 Linux 系统下的 <code>/home/用户名/.ghost</code>文件中。</p>
 <p>在安装的过程中，如果因为系统或网络问题失败或卡住过久。则耐心查看错误原因，并删除<code>.ghost</code>文件，重新进行权限给予以及安装的过程。若成功安装 Ghost 博客之后，系统会让你回答三个问题：</p>
-<pre><code class="language-typescript">1. 你的github用户名：
+<pre><code class="language-java">1. 你的github用户名：
 2. 你要安装到的repository的git所需的HTTPS或SSH地址(即上文中记录的内容)
 3. 你要安装到的repository的名称
 </code></pre>
@@ -183,7 +183,7 @@ sudo sh ./install.sh
 <h2 id="i3">更新博客</h2>
 <h3 id="ghost">Ghost 的简单操作</h3>
 <p>在项目安装完成之后，Ghost Blog 会自动在系统中运行，并且开启了端口 <code>localhost:2368</code>。但实际上，该项目的配置文件使得它实际运行于 <code>localhost:2373</code>。可以在<code>.ghost</code>文件夹中，通过 <code>ghost ls</code> 命令就可以查看实际运行的端口了。在关闭电脑之后，ghost系统也会随之关闭，需要重新打开，以下是一些 ghost 的常用命令：</p>
-<pre><code class="language-typescript">// 如果因为权限问题，被deny：一可更改文件读写权限，二可在所有命令前加 sudo
+<pre><code class="language-java">// 如果因为权限问题，被deny：一可更改文件读写权限，二可在所有命令前加 sudo
 // 开启
 ghost start
 // 重启
@@ -196,11 +196,66 @@ ghost ls
 <p>在 ghost 服务开启之后，进入<code>localhost:2373</code>就可以查看当前的动态页面，而<code>localhost:2373/ghost</code>就可以进入服务器，进行文章等博客内容的管理了，首次登录时需要配置一些账号等基本信息，之后就可以直接使用了。</p>
 <h3 id="deploysh">deploy.sh</h3>
 <p>在更新之后，只需要在 .ghost 文件夹中运行 deploy.sh 就可以直接部署，十分方便：</p>
-<pre><code class="language-typescript">cd ~/.ghost
+<pre><code class="language-java">cd ~/.ghost
 ./deploy.sh
 </code></pre>
-<p>同样，这需要数分钟，在 Github Pages 上才看得到最新的内容。</p>
+<p>这个脚本首先会将所有动态内容通过Buster转化成为静态文件，然后通过git，自动部署到Github Pages。 同样，这需要数分钟，在 Github Pages 上才看得到最新的内容。</p>
 <h1 id="j">修正篇</h1>
+<p>该项目的持有者以及Buster都很久没有更新这两个项目了，项目多多少少存在一些问题。所以我反复检查了源码以及网上的资料，针对两个重要 bug 进行了一下的改进：</p>
+<ul>
+<li>
+<p>修改默认端口号，否则链接与头像图片会出错</p>
+<ul>
+<li>打开 .ghost 文件夹下的 <code>config.development.json</code>文件，将第一行端口改为：<code>"http://localhost:2373"</code>，只要与 port 相同即可。</li>
+</ul>
+</li>
+<li>
+<p>修改<code>deploy.sh</code>文件，增加一段脚本，不然博文图片将无法显示</p>
+<ul>
+<li>
+<p>修改<code>deploy.sh</code>，添加以下8行代码（注意从 CORRECTING BUSTER ERRORS 那行开始）到指定位置：</p>
+<pre><code class="language-java">...
+  
+update() {
+	if [ -d "$GHOST_PATH" ]; then
+		cd "$GHOST_PATH"
+
+		# Generating static files
+		buster generate --domain="$GHOST_SERVER_URL"
+		
+		echo ' -------------- CORRECTING BUSTER ERRORS  -------------- '
+		sudo chmod -R 777 *
+		find . -type f -name '*.html' | xargs sed -i -e 's#.jpg#.jpg#g'
+		find . -type f -name '*.html' | xargs sed -i -e 's#.jpg#.jpg#g'
+		find . -type f -name '*.html' | xargs sed -i -e 's#.jpg#.jpg#g'
+		find . -type f -name '*.html' | xargs sed -i -e 's#.png#.png#g'
+		find . -type f -name '*.html' | xargs sed -i -e 's#. png#. png#g'
+		find . -type f -name '*.html' | xargs sed -i -e 's#. png#. png#g'
+
+		echo ' -------------------- FIXING LINKS  -------------------- '
+		echo ''
+		read -p "Github username: "  gh_username
+		echo "Leave blank if repo name is username.github.io"
+		read -p "Repo name: " gh_repo
+    
+   	...
+</code></pre>
+<p>他这出现一个致命的bug，图片的后缀莫名地变成了.png'，. png'，. png'。这里遍历了所有代码，找到出错的地方，进行了修改。</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>结语：本文主要介绍了一个自动部署 Ghost 到 Github Pages 的方法。在下一篇文章中，我们将重点介绍，如何美化 Ghost 博客。</p>
+</blockquote>
+<blockquote>
+<p>参考：</p>
+<ol>
+<li><a href="https://github.com/paladini/ghost-on-github-pages">https://github.com/paladini/ghost-on-github-pages</a></li>
+<li><a href="https://github.com/axitkhurana/buster">https://github.com/axitkhurana/buster</a></li>
+<li><a href="https://github.com/axitkhurana/buster/issues/94">https://github.com/axitkhurana/buster/issues/94</a></li>
+</ol>
+</blockquote>
 
 
             </section>
