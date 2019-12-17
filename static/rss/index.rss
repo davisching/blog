@@ -1,9 +1,89 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Davis Ching</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2373/</link><image><url>http://localhost:2373/favicon.png</url><title>Davis Ching</title><link>http://localhost:2373/</link></image><generator>Ghost 3.1</generator><lastBuildDate>Tue, 17 Dec 2019 12:50:58 GMT</lastBuildDate><atom:link href="http://localhost:2373/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>优雅又庶民地在Github Pages中上线Ghost博客系统 - 壹</title><description>这篇文章，将会一步步，记录在 Github Pages 上架设 Ghost 博客系统的过程。前后只需要十分钟，就可以完成上线，优雅又免费的获得一个个人博客！</description><link>http://localhost:2373/ghost-on-github-pages/</link><guid isPermaLink="false">5df883a194c78f03ea1a66ff</guid><category>自封的首席技术专栏</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Tue, 17 Dec 2019 07:30:17 GMT</pubDate><media:content url="http://localhost:2373/content/images/2019/12/1044930.jpg" medium="image"/><content:encoded>&lt;!--kg-card-begin: markdown--&gt;&lt;h1 id&gt;序篇&lt;/h1&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Davis Ching</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2373/</link><image><url>http://localhost:2373/favicon.png</url><title>Davis Ching</title><link>http://localhost:2373/</link></image><generator>Ghost 3.1</generator><lastBuildDate>Tue, 17 Dec 2019 13:40:19 GMT</lastBuildDate><atom:link href="http://localhost:2373/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>优雅又庶民地在Github Pages中上线Ghost博客系统 - 壹</title><description>这篇文章，将会一步步，记录在 Github Pages 上架设 Ghost 博客系统的过程。前后只需要十分钟，就可以完成上线，优雅又免费的获得一个个人博客！</description><link>http://localhost:2373/ghost-on-github-pages/</link><guid isPermaLink="false">5df883a194c78f03ea1a66ff</guid><category>自封的首席技术专栏</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Tue, 17 Dec 2019 07:30:17 GMT</pubDate><media:content url="http://localhost:2373/content/images/2019/12/1044930.jpg" medium="image"/><content:encoded>&lt;!--kg-card-begin: markdown--&gt;&lt;h1 id&gt;序篇&lt;/h1&gt;
 &lt;img src="http://localhost:2373/content/images/2019/12/1044930.jpg" alt="优雅又庶民地在Github Pages中上线Ghost博客系统 - 壹"&gt;&lt;p&gt;笔者对于「想要拥有个人网站」这事儿，在过去几年总会偶尔灵光一现，心血来潮地买下几个月的轻应用服务器以及域名，然后兴高采烈地架设起来，更换各种博客主题，记录一些学习心得；然而，潮起之后马上潮落，有时课程或实习太充实，无暇更新。再者，每到续费的时候，掂量掂量口袋里的钞票，穷大学生最终还是选择了多吃几餐饕餮盛宴。&lt;/p&gt;
-&lt;p&gt;在这若干次的尝试中，用过阿里云、腾讯云的服务器，国内访问很快，但备案起来很麻烦；买过 Amazon，Wix，GoDaddy 以及 Ghost.org 的服务，但是限制较多，需要信用卡，而且墙内速度令人抓狂。而在软件选择上，基本上都是在 &lt;a href="https://zh-cn.wordpress.com/"&gt;WordPress&lt;/a&gt; 以及 &lt;a href="https://ghost.org"&gt;Ghost Blog&lt;/a&gt; 中周旋。其实这两者对我来说，就像是 facebook 与 ins 对比的感觉。从官方提供的主题来看，后者真的优美许多。WordPress 插件多，但对我个人来说，喜欢且免费的主题太少。因为很少有开发者有那个佛心，无回报的去针对每一个 WordPress widget（小工具）进行兼容，对接和美化。再来，WordPress 着墨了很多在留言、Email、监控，这些都是小型网店才需要的配置，对于一个个人博客来说太重了；所以我更喜欢 Ghost Blog，轻便又优美，改样式也很方便，对于一个轻博客来说，功能足已。&lt;/p&gt;
+&lt;p&gt;在这若干次的尝试中，用过阿里云、腾讯云的服务器，国内访问很快，但备案起来很麻烦；买过Amazon，Wix，GoDaddy 以及 Ghost.org 的服务，但是限制较多，需要信用卡，而且墙内速度令人抓狂。而在软件选择上，基本上都是在 &lt;a href="https://zh-cn.wordpress.com/"&gt;WordPress&lt;/a&gt; 以及 &lt;a href="https://ghost.org"&gt;Ghost Blog&lt;/a&gt; 中周旋。其实这两者对我来说，就像是 facebook 与 ins 对比的感觉。从官方提供的主题来看，后者真的优美许多。WordPress 插件多，但对我个人来说，喜欢且免费的主题太少。因为很少有开发者有那个佛心，无回报的去针对每一个 WordPress widget（小工具）进行兼容，对接和美化。再来，WordPress 着墨了很多在留言、Email、监控，这些都是小型网店才需要的配置，对于一个个人博客来说太重了；所以我更喜欢 Ghost Blog，轻便又优美，改样式也很方便，对于一个轻博客来说，功能足已。&lt;/p&gt;
 &lt;p&gt;过去想要架设一个 Ghost Blog，最简单的方法就是搞一个 linux 系统的服务器，然后跟着官网的步骤，很快就能过上线了。再后来，Ghost.org 官方提供了托管服务，免去了一系列繁琐的架设流程，也省去了域名的配置，但转而换来的是一个每个月至少需要 $29 刀的价格。而就在这两年，Github Pages 的问世，让免费托管成了可能。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; 是 Github 提供的静态页面服务，可以通过 Jekyll 来进行博客管理。很多 Ghost Blog 的爱好者也关注到了这个平台，有大神在 Github 上提供了一键部署的功能。于是就有了我们今天要介绍的架设实录：如何在 Github Pages 上优雅地架设 Ghost 博客系统。&lt;/p&gt;
 &lt;h1 id&gt;架设篇&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;【写在前面】本文适用于 Linux 或 macOS 系统，Windows 系统的小伙伴需自行参考各类软件的安装方式。需要用到的自动安装的 Github 项目在：&lt;a href="https://github.com/paladini/ghost-on-github-pages"&gt;paladini/ghost-on-github-pages&lt;/a&gt;，以下步骤大部分也翻译于此。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id&gt;项目思路&lt;/h2&gt;
+&lt;p&gt;这个项目首先会自动安装 Ghost 博客系统，之后会将动态系统转化为静态页面，并自动部署到 Github Pages 中。值得注意的是，静态页面转化的功能其实用的是早在 2014 就不再更新的 &lt;a href="https://github.com/axitkhurana/buster"&gt;Buster.py&lt;/a&gt;。这两个项目都多多少少存在一些 bug，所以如果你成功走完「架设篇」，请一定要看完&lt;a href="#j"&gt;「修正篇」&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id&gt;步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="#i1"&gt;环境配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#i2"&gt;软件安装&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#i3"&gt;更新博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="i1"&gt;环境配置&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;安装 &lt;a href="https://www.python.org/download/releases/2.7.2/"&gt;Python 2&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;该软件采用的是 Python 2.x 的环境，因为之后会自动调用的 buster 不支持 3.0+。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;# Debian-based systems
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python2.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;安装 &lt;a href="https://docs.ghost.org/docs/supported-node-versions"&gt;NodeJS&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;安装可被 Ghost Blog 支持的 NodeJS 版本，目前官方支持的版本分别为 &lt;strong&gt;8.x&lt;/strong&gt;、&lt;strong&gt;10.x（官方推荐）&lt;/strong&gt; 与 &lt;strong&gt;12.x&lt;/strong&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;# Debian-based systems
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;安装 &lt;a href="https://nodejs.org/en/"&gt;npm&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;# Debian-based systems
+sudo apt install npm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;安装 &lt;a href="https://brew.sh/index_zh-cn.html"&gt;wget&lt;/a&gt; (MacOS)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;由于之后自动生成静态文件的过程需要使用 wget 命令，但 MacOS 并没有自带这个功能，需要通过 &lt;a href="https://brew.sh/index_zh-cn.html"&gt;homebrew&lt;/a&gt; 进行安装。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;# 安装 homebrew
+/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;
+
+# 安装 wget
+brew install wget
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;开启「隐藏文件可见」(MacOS)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;该软件会将 Ghost 博客的文件安装到 MacOS 的 &lt;code&gt;～&lt;/code&gt; 目录中，即 &lt;code&gt;/Users/用户名&lt;/code&gt;中的一个&lt;code&gt;.ghost&lt;/code&gt;的隐藏目录。若不开启「隐藏文件可见」，将无法修改这个目录的读写权限。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;defaults write com.apple.Finder AppleShowAllFiles YES
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="i2"&gt;软件安装&lt;/h2&gt;
+&lt;h3 id="ghostongithubpages"&gt;下载 ghost-on-github-pages&lt;/h3&gt;
+&lt;p&gt;可以从项目地址 &lt;a href="https://github.com/paladini/ghost-on-github-pages"&gt;paladini/ghost-on-github-pages&lt;/a&gt; 中寻找，或从&lt;a href="https://github.com/paladini/ghost-on-github-pages/archive/master.zip"&gt;这里&lt;/a&gt;下载最新版本的软件，然后解压到任意位置。打开文件后，需要关注的只有一个 &lt;code&gt;install.sh&lt;/code&gt; 文件。&lt;/p&gt;
+&lt;h3 id="githubrepository"&gt;创建一个新的 Github repository&lt;/h3&gt;
+&lt;p&gt;首先，你需要开启 Github pages 的使用，方法可以参考&lt;a href="https://pages.github.com/"&gt;Github pages官方网站&lt;/a&gt;。如果你要直接使用 &lt;code&gt;https://用户名.github.io&lt;/code&gt; 作为这个博客的地址的话，则无需在 &lt;code&gt;用户名.github.io&lt;/code&gt; 的基础上额外创建仓库。不过，我个人推荐还是在「pages项目」的基础上，额外创建一个新的项目管理博客系统，这样更方便管理，原本的页面也不会被吞掉。&lt;/p&gt;
+&lt;p&gt;在创建好 repository 之后，你需要记下来该项目 git 的 HTTPS 或 SSH 地址。这里推荐使用 HTTPS，因为这免去了系统一些密钥的配置。大致来说，新项目的 HTTPS 地址格式如下：&lt;code&gt;https://github.com/用户名/新项目名称.git&lt;/code&gt;。这个地址很重要，因为运行安装之后，需要填写。&lt;/p&gt;
+&lt;h3 id="installsh"&gt;运行 install.sh 进行安装&lt;/h3&gt;
+&lt;p&gt;在刚刚解压的文件夹打开 terminal，首先需要给予这个文件读写的权限（当然，也可以在 Folder 中右键修改）：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;chmod +x install.sh
+sudo sh ./install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而后，软件就会自动开始安装 Ghost 博客到 mac 的 &lt;code&gt;～&lt;/code&gt; 目录（ &lt;code&gt;/Users/用户名&lt;/code&gt;）中的一个&lt;code&gt;.ghost&lt;/code&gt;隐藏文件中。或者 Linux 系统下的 &lt;code&gt;/home/用户名/.ghost&lt;/code&gt;文件中。&lt;/p&gt;
+&lt;p&gt;在安装的过程中，如果因为系统或网络问题失败或卡住过久。则耐心查看错误原因，并删除&lt;code&gt;.ghost&lt;/code&gt;文件，重新进行权限给予以及安装的过程。若成功安装 Ghost 博客之后，系统会让你回答三个问题：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;1. 你的github用户名：
+2. 你要安装到的repository的git所需的HTTPS或SSH地址(即上文中记录的内容)
+3. 你要安装到的repository的名称
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;填写并安装成功后，你的github项目就会自动提交上传，直接访问&lt;code&gt;https://用户名.github.io/项目名&lt;/code&gt; 就成功部署了。（Github Pages 在上传后不会立即更新，一般需要 2～5 分钟不等，若过长时间没有更新，请检查浏览器缓存是否需要清除或检查Github绑定邮件，失败的话将会发送邮件告知原因。｜另外，这个项目太久没有维护，Github 将会提醒 6 个 warnings，选择“无视”这些警报就不会再提醒了。）&lt;/p&gt;
+&lt;h2 id="i3"&gt;更新博客&lt;/h2&gt;
+&lt;h3 id="ghost"&gt;Ghost 的简单操作&lt;/h3&gt;
+&lt;p&gt;在项目安装完成之后，Ghost Blog 会自动在系统中运行，并且开启了端口 &lt;code&gt;localhost:2368&lt;/code&gt;。但实际上，该项目的配置文件使得它实际运行于 &lt;code&gt;localhost:2373&lt;/code&gt;。可以在&lt;code&gt;.ghost&lt;/code&gt;文件夹中，通过 &lt;code&gt;ghost ls&lt;/code&gt; 命令就可以查看实际运行的端口了。在关闭电脑之后，ghost系统也会随之关闭，需要重新打开，以下是一些 ghost 的常用命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;// 如果因为权限问题，被deny：一可更改文件读写权限，二可在所有命令前加 sudo
+// 开启
+ghost start
+// 重启
+ghost restart
+// 关闭
+ghost stop
+// 查看端口情况
+ghost ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在 ghost 服务开启之后，进入&lt;code&gt;localhost:2373&lt;/code&gt;就可以查看当前的动态页面，而&lt;code&gt;localhost:2373/ghost&lt;/code&gt;就可以进入服务器，进行文章等博客内容的管理了，首次登录时需要配置一些账号等基本信息，之后就可以直接使用了。&lt;/p&gt;
+&lt;h3 id="deploysh"&gt;deploy.sh&lt;/h3&gt;
+&lt;p&gt;在更新之后，只需要在 .ghost 文件夹中运行 deploy.sh 就可以直接部署，十分方便：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-typescript"&gt;cd ~/.ghost
+./deploy.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;同样，这需要数分钟，在 Github Pages 上才看得到最新的内容。&lt;/p&gt;
+&lt;h1 id="j"&gt;修正篇&lt;/h1&gt;
 &lt;!--kg-card-end: markdown--&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>Welcome, it's great to have you here.
 We know that first impressions are important, so we've populated your new site with some initial getting started posts that will help you get familiar with everything in no time.</description><link>http://localhost:2373/welcome/</link><guid isPermaLink="false">5df7576756dcb80583dbc938</guid><category>官方文章</category><dc:creator>Ghost</dc:creator><pubDate>Mon, 16 Dec 2019 10:07:41 GMT</pubDate><media:content url="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png" medium="image"/><content:encoded>&lt;h2 id="a-few-things-you-should-know"&gt;&lt;strong&gt;A few things you should know&lt;/strong&gt;&lt;/h2&gt;&lt;ol&gt;&lt;li&gt;Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That's who it works best for. &lt;/li&gt;&lt;li&gt;The entire platform can be modified and customised to suit your needs. It's very powerful, but does require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog. &lt;/li&gt;&lt;li&gt;It's possible to work with all your favourite tools and apps with hundreds of &lt;a href="https://ghost.org/integrations/"&gt;integrations&lt;/a&gt; to speed up your workflows, connect email lists, build communities and much more.&lt;/li&gt;&lt;/ol&gt;&lt;h2 id="behind-the-scenes"&gt;Behind the scenes&lt;/h2&gt;&lt;img src="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png" alt="Welcome to Ghost"&gt;&lt;p&gt;Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our &lt;a href="https://ghost.org/pricing"&gt;Ghost(Pro)&lt;/a&gt; service, and every penny we make is re-invested into funding further development of free, open source technology for modern publishing.&lt;/p&gt;&lt;p&gt;The version of Ghost you are looking at right now would not have been made possible without generous contributions from the open source &lt;a href="https://github.com/TryGhost"&gt;community&lt;/a&gt;.&lt;/p&gt;&lt;h2 id="next-up-the-editor"&gt;Next up, the editor&lt;/h2&gt;&lt;p&gt;The main thing you'll want to read about next is probably: &lt;a href="http://localhost:2373/the-editor/"&gt;the Ghost editor&lt;/a&gt;. This is where the good stuff happens.&lt;/p&gt;&lt;blockquote&gt;By the way, once you're done reading, you can simply delete the default Ghost user from your team to remove all of these introductory posts! &lt;/blockquote&gt;</content:encoded></item><item><title>Writing posts with Ghost ✍️</title><description>Discover familiar formatting options in a functional toolbar and the ability to add dynamic content seamlessly.</description><link>http://localhost:2373/the-editor/</link><guid isPermaLink="false">5df7576756dcb80583dbc936</guid><category>官方文章</category><dc:creator>Ghost</dc:creator><pubDate>Mon, 16 Dec 2019 10:07:40 GMT</pubDate><media:content url="https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png" medium="image"/><content:encoded>&lt;h2 id="just-start-writing"&gt;Just start writing&lt;/h2&gt;&lt;img src="https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png" alt="Writing posts with Ghost ✍️"&gt;&lt;p&gt;Ghost has a powerful visual editor with familiar formatting options, as well as the ability to add dynamic content.&lt;/p&gt;&lt;p&gt;Select your text to add formatting such as headers or to create links. Or use Markdown shortcuts to do the work for you - if that's your thing. &lt;/p&gt;&lt;figure class="kg-card kg-image-card"&gt;&lt;img src="https://static.ghost.org/v2.0.0/images/formatting-editor-demo.gif" class="kg-image" alt="Writing posts with Ghost ✍️"&gt;&lt;/figure&gt;&lt;h2 id="rich-editing-at-your-fingertips"&gt;Rich editing at your fingertips&lt;/h2&gt;&lt;p&gt;The editor can also handle rich media objects, called &lt;strong&gt;cards&lt;/strong&gt;, which can be organised and re-ordered using drag and drop. &lt;/p&gt;&lt;p&gt;You can insert a card either by clicking the  &lt;code&gt;+&lt;/code&gt;  button, or typing  &lt;code&gt;/&lt;/code&gt;  on a new line to search for a particular card. This allows you to efficiently insert&lt;strong&gt; images&lt;/strong&gt;, &lt;strong&gt;markdown&lt;/strong&gt;, &lt;strong&gt;html, embeds &lt;/strong&gt;and more.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;For example&lt;/strong&gt;:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Insert a video from YouTube directly by pasting the URL&lt;/li&gt;&lt;li&gt;Create unique content like buttons or forms using the HTML card&lt;/li&gt;&lt;li&gt;Need to share some code? Embed code blocks directly &lt;/li&gt;&lt;/ul&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;header class="site-header outer"&amp;gt;
     &amp;lt;div class="inner"&amp;gt;
