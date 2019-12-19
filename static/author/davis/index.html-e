@@ -159,7 +159,7 @@
             <div class="author-meta">
                     <div class="author-location">上海｜台北 <span class="bull">•</span></div>
                 <div class="author-stats">
-                    1 post <span class="bull">•</span>
+                    2 posts <span class="bull">•</span>
                 </div>
                 <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed/http://localhost:2373/author/davis/rss/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"></circle><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path></svg>
 </a>
@@ -212,6 +212,53 @@
             </ul>
 
             <span class="post-date">Tuesday December 17 2019</span>
+        </footer>
+
+    </div>
+
+</article>
+
+
+                <article class="post-card post tag-source-code-reading ">
+
+    <a class="post-card-image-link" href="../../enumeration-iterator/">
+        <img class="post-card-image" srcset="../../content/images/size/w300/2019/12/thumb-1920-68300.jpg 300w,
+                   ../../content/images/size/w600/2019/12/thumb-1920-68300.jpg 600w,
+                  ../../content/images/size/w1000/2019/12/thumb-1920-68300.jpg 1000w,
+                 ../../content/images/size/w2000/2019/12/thumb-1920-68300.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2019/12/thumb-1920-68300.jpg" alt="Enumeration与Iterator接口">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../enumeration-iterator/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">超大杯Americano ，加两份源码</span>
+                <h2 class="post-card-title">Enumeration与Iterator接口</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Davis · 景詩維 
+                    </div>
+
+                        <a href="index.html" class="static-avatar">
+                            <img class="author-profile-image" src="../../content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
+                        </a>
+                </li>
+            </ul>
+
+            <span class="post-date">Monday December 16 2019</span>
         </footer>
 
     </div>

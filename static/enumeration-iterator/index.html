@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Welcome to Ghost</title>
+    <title>Enumeration与Iterator接口</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,31 +17,27 @@
     
     <meta property="og:site_name" content="Davis Ching">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Welcome to Ghost">
-    <meta property="og:description" content="Welcome, it's great to have you here.
-We know that first impressions are important, so we've populated your new site with some initial getting started posts that will help you get familiar with everything in no time.">
-    <meta property="og:url" content="http://localhost:2373/welcome/">
-    <meta property="og:image" content="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png">
-    <meta property="article:published_time" content="2019-12-16T10:07:41.000Z">
-    <meta property="article:modified_time" content="2019-12-16T10:07:35.000Z">
-    <meta property="article:tag" content="官方文章">
+    <meta property="og:title" content="Enumeration与Iterator接口">
+    <meta property="og:description" content="本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了 Iterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为 Enumeration 增加了 asIterator() 方法，允许将它转化为">
+    <meta property="og:url" content="http://localhost:2373/enumeration-iterator/">
+    <meta property="og:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-68300.jpg">
+    <meta property="article:published_time" content="2019-12-16T14:05:00.000Z">
+    <meta property="article:modified_time" content="2019-12-19T14:20:07.000Z">
+    <meta property="article:tag" content="超大杯Americano ，加两份源码">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
-    <meta property="article:author" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Welcome to Ghost">
-    <meta name="twitter:description" content="Welcome, it's great to have you here.
-We know that first impressions are important, so we've populated your new site with some initial getting started posts that will help you get familiar with everything in no time.">
-    <meta name="twitter:url" content="http://localhost:2373/welcome/">
-    <meta name="twitter:image" content="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png">
+    <meta name="twitter:title" content="Enumeration与Iterator接口">
+    <meta name="twitter:description" content="本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了 Iterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为 Enumeration 增加了 asIterator() 方法，允许将它转化为">
+    <meta name="twitter:url" content="http://localhost:2373/enumeration-iterator/">
+    <meta name="twitter:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-68300.jpg">
     <meta name="twitter:label1" content="Written by">
-    <meta name="twitter:data1" content="Ghost">
+    <meta name="twitter:data1" content="Davis · 景詩維 ">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="官方文章">
+    <meta name="twitter:data2" content="超大杯Americano ，加两份源码">
     <meta name="twitter:site" content="@tryghost">
-    <meta name="twitter:creator" content="ghost">
-    <meta property="og:image:width" content="2000">
-    <meta property="og:image:height" content="1215">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1200">
     
     <script type="application/ld+json">
 {
@@ -59,32 +55,28 @@ We know that first impressions are important, so we've populated your new site w
     },
     "author": {
         "@type": "Person",
-        "name": "Ghost",
+        "name": "Davis · 景詩維 ",
         "image": {
             "@type": "ImageObject",
-            "url": "https://static.ghost.org/v3.0.0/images/ghost.png",
-            "width": 400,
-            "height": 400
+            "url": "http://localhost:2373/content/images/2019/12/Snip20191217_3.png",
+            "width": 1278,
+            "height": 1276
         },
-        "url": "http://localhost:2373/author/ghost/",
-        "sameAs": [
-            "https://ghost.org",
-            "https://www.facebook.com/ghost",
-            "https://twitter.com/ghost"
-        ]
+        "url": "http://localhost:2373/author/davis/",
+        "sameAs": []
     },
-    "headline": "Welcome to Ghost",
-    "url": "http://localhost:2373/welcome/",
-    "datePublished": "2019-12-16T10:07:41.000Z",
-    "dateModified": "2019-12-16T10:07:35.000Z",
+    "headline": "Enumeration与Iterator接口",
+    "url": "http://localhost:2373/enumeration-iterator/",
+    "datePublished": "2019-12-16T14:05:00.000Z",
+    "dateModified": "2019-12-19T14:20:07.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png",
-        "width": 2000,
-        "height": 1215
+        "url": "http://localhost:2373/content/images/2019/12/thumb-1920-68300.jpg",
+        "width": 1920,
+        "height": 1200
     },
-    "keywords": "官方文章",
-    "description": "Welcome, it&#x27;s great to have you here.\nWe know that first impressions are important, so we&#x27;ve populated your new site with some initial getting started posts that will help you get familiar with everything in no time.",
+    "keywords": "超大杯Americano ，加两份源码",
+    "description": "&gt; 本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。\n\n\nEnumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：\n\n * boolean hasMoreElements() - 判断是否还有未遍历的元素\n * E nextElement() - 返回一个元素，且该元素应该被视为已遍历\n\n在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了\nIterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为\nEnumeration 增加了 asIterator() 方法，允许将它转化为 Iterator 来使用。\n\npackage java.util;\n\npublic interface Enumeration&lt;E&gt; {\n\n    boolean hasMoreElements();\n\n    E nextEl",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2373/"
@@ -131,7 +123,7 @@ We know that first impressions are important, so we've populated your new site w
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/tomorrow-night-eighties.min.css" rel="stylesheet">
 
 </head>
-<body class="post-template tag-getting-started">
+<body class="post-template tag-source-code-reading">
     <div class="site-wrapper">
         <header class="site-header outer no-image">
     <div class="inner">
@@ -198,26 +190,65 @@ We know that first impressions are important, so we've populated your new site w
 
 <main id="site-main" class="site-main outer">
     <div class="inner">
-        <article class="post-full post tag-getting-started ">
+        <article class="post-full post tag-source-code-reading ">
             <figure class="post-hero-image">
                 <div class="post-hero-image-title">
                     <section class="post-full-meta">
                         <time class="post-full-meta-date" datetime="2019-12-16">16 December 2019</time>
-                            <span class="date-divider">/</span> <a href="../tag/getting-started/">官方文章</a>
+                            <span class="date-divider">/</span> <a href="../tag/source-code-reading/">超大杯Americano ，加两份源码</a>
                     </section>
-                    <h1 class="post-full-title">Welcome to Ghost</h1>
+                    <h1 class="post-full-title">Enumeration与Iterator接口</h1>
                 </div>
-                <img srcset="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 300w,
-                            https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 600w,
-                            https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 1000w,
-                            https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 2000w" sizes="(max-width: 800px) 400px,
+                <img srcset="../content/images/size/w300/2019/12/thumb-1920-68300.jpg 300w,
+                           ../content/images/size/w600/2019/12/thumb-1920-68300.jpg 600w,
+                          ../content/images/size/w1000/2019/12/thumb-1920-68300.jpg 1000w,
+                         ../content/images/size/w2000/2019/12/thumb-1920-68300.jpg 2000w" sizes="(max-width: 800px) 400px,
                             (max-width: 1170px) 700px,
-                            1400px" src="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png" alt="Welcome to Ghost">
+                            1400px" src="../content/images/size/w2000/2019/12/thumb-1920-68300.jpg" alt="Enumeration与Iterator接口">
             </figure>
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <h2 id="a-few-things-you-should-know"><strong>A few things you should know</strong></h2><ol><li>Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That's who it works best for. </li><li>The entire platform can be modified and customised to suit your needs. It's very powerful, but does require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog. </li><li>It's possible to work with all your favourite tools and apps with hundreds of <a href="https://ghost.org/integrations/">integrations</a> to speed up your workflows, connect email lists, build communities and much more.</li></ol><h2 id="behind-the-scenes">Behind the scenes</h2><p>Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our <a href="https://ghost.org/pricing">Ghost(Pro)</a> service, and every penny we make is re-invested into funding further development of free, open source technology for modern publishing.</p><p>The version of Ghost you are looking at right now would not have been made possible without generous contributions from the open source <a href="https://github.com/TryGhost">community</a>.</p><h2 id="next-up-the-editor">Next up, the editor</h2><p>The main thing you'll want to read about next is probably: <a href="../the-editor/">the Ghost editor</a>. This is where the good stuff happens.</p><blockquote>By the way, once you're done reading, you can simply delete the default Ghost user from your team to remove all of these introductory posts! </blockquote>
+                    <!--kg-card-begin: markdown--><blockquote>
+<p>本节将对 <strong>Enumeration 及 Iterator 接口</strong>进行源码阅读，Java 版本为 13。</p>
+</blockquote>
+<p>Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：</p>
+<ul>
+<li>boolean hasMoreElements() - 判断是否还有未遍历的元素</li>
+<li>E nextElement() - 返回一个元素，且该元素应该被视为已遍历</li>
+</ul>
+<p>在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了 Iterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为 Enumeration 增加了 asIterator() 方法，允许将它转化为 Iterator 来使用。</p>
+<pre><code class="language-java">package java.util;
+
+public interface Enumeration&lt;E&gt; {
+
+    boolean hasMoreElements();
+
+    E nextElement();
+
+    default Iterator&lt;E&gt; asIterator() {
+        return new Iterator&lt;&gt;() {
+            @Override public boolean hasNext() {
+                return hasMoreElements();
+            }
+            @Override public E next() {
+                return nextElement();
+            }
+        };
+    }
+}
+</code></pre>
+<p>Vector 的源码中对 Enumeration 进行了实现，因此，也可以使用 for循环或lamda表达式以外的以下方法遍历 Vector - v：</p>
+<pre><code class="language-java">   for (Enumeration&lt;E&gt; e = v.elements(); e.hasMoreElements();)
+       System.out.println(e.nextElement());
+</code></pre>
+<p>。。。</p>
+<blockquote>
+<p>官方文档：</p>
+<p><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/Enumeration.html">https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/Enumeration.html</a></p>
+<p><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/Iterator.html">https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/Iterator.html</a></p>
+</blockquote>
+<!--kg-card-end: markdown-->
                 </div>
             </section>
 
@@ -227,14 +258,14 @@ We know that first impressions are important, so we've populated your new site w
 
                     
 <section class="author-card">
-        <img class="author-profile-image" src="https://static.ghost.org/v3.0.0/images/ghost.png" alt="Ghost">
+        <img class="author-profile-image" src="../content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
     <section class="author-card-content">
-        <h4 class="author-card-name"><a href="../author/ghost/">Ghost</a></h4>
-            <p>You can delete this user to remove all the welcome posts</p>
+        <h4 class="author-card-name"><a href="../author/davis/">Davis · 景詩維 </a></h4>
+            <p>Read <a href="../author/davis/">more posts</a> by this author.</p>
     </section>
 </section>
 <div class="post-full-footer-right">
-    <a class="author-card-button" href="../author/ghost/">Read More</a>
+    <a class="author-card-button" href="../author/davis/">Read More</a>
 </div>
 
 
@@ -249,45 +280,27 @@ We know that first impressions are important, so we've populated your new site w
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
-                <article class="read-next-card" style="background-image: url(https://static.ghost.org/v3.0.0/images/publication-cover.png)">
-                    <header class="read-next-card-header">
-                        <small class="read-next-card-header-sitetitle">— Davis Ching —</small>
-                        <h3 class="read-next-card-header-title"><a href="../tag/getting-started/">官方文章</a></h3>
-                    </header>
-                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
-</div>
-                    <div class="read-next-card-content">
-                        <ul>
-                            <li><a href="../the-editor/">Writing posts with Ghost ✍️</a></li>
-                            <li><a href="../publishing-options/">Publishing options</a></li>
-                            <li><a href="../admin-settings/">Managing admin settings</a></li>
-                        </ul>
-                    </div>
-                    <footer class="read-next-card-footer">
-                        <a href="../tag/getting-started/">See all 6 posts →</a>
-                    </footer>
-                </article>
 
-                <article class="post-card post tag-source-code-reading ">
+                <article class="post-card post tag-tech-notes featured ">
 
-    <a class="post-card-image-link" href="../enumeration-iterator/">
-        <img class="post-card-image" srcset="../content/images/size/w300/2019/12/thumb-1920-68300.jpg 300w,
-                   ../content/images/size/w600/2019/12/thumb-1920-68300.jpg 600w,
-                  ../content/images/size/w1000/2019/12/thumb-1920-68300.jpg 1000w,
-                 ../content/images/size/w2000/2019/12/thumb-1920-68300.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2019/12/thumb-1920-68300.jpg" alt="Enumeration与Iterator接口">
+    <a class="post-card-image-link" href="../ghost-on-github-pages/">
+        <img class="post-card-image" srcset="../content/images/size/w300/2019/12/1044930.jpg 300w,
+                   ../content/images/size/w600/2019/12/1044930.jpg 600w,
+                  ../content/images/size/w1000/2019/12/1044930.jpg 1000w,
+                 ../content/images/size/w2000/2019/12/1044930.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2019/12/1044930.jpg" alt="优雅又庶民地在Github Pages中上线Ghost博客系统">
     </a>
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="../enumeration-iterator/">
+        <a class="post-card-content-link" href="../ghost-on-github-pages/">
 
             <header class="post-card-header">
-                    <span class="post-card-tags">超大杯Americano ，加两份源码</span>
-                <h2 class="post-card-title">Enumeration与Iterator接口</h2>
+                    <span class="post-card-tags">自封的首席技术专栏</span>
+                <h2 class="post-card-title">优雅又庶民地在Github Pages中上线Ghost博客系统</h2>
             </header>
 
             <section class="post-card-excerpt">
-                <p>本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了</p>
+                <p>这篇文章，将会一步步，记录在 Github Pages 上架设 Ghost 博客系统的过程。前后只需要十分钟，就可以完成上线，优雅又免费的获得一个个人博客！</p>
             </section>
 
         </a>
@@ -307,7 +320,7 @@ We know that first impressions are important, so we've populated your new site w
                 </li>
             </ul>
 
-            <span class="post-date">Monday December 16 2019</span>
+            <span class="post-date">Tuesday December 17 2019</span>
         </footer>
 
     </div>
@@ -316,24 +329,24 @@ We know that first impressions are important, so we've populated your new site w
 
                 <article class="post-card post tag-getting-started ">
 
-    <a class="post-card-image-link" href="../the-editor/">
-        <img class="post-card-image" srcset="https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 300w,
-                    https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 600w,
-                    https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 1000w,
-                    https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png 2000w" sizes="(max-width: 1000px) 400px, 700px" src="https://static.ghost.org/v3.0.0/images/writing-posts-with-ghost.png" alt="Writing posts with Ghost ✍️">
+    <a class="post-card-image-link" href="../welcome/">
+        <img class="post-card-image" srcset="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 300w,
+                    https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 600w,
+                    https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 1000w,
+                    https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png 2000w" sizes="(max-width: 1000px) 400px, 700px" src="https://static.ghost.org/v3.0.0/images/welcome-to-ghost.png" alt="Welcome to Ghost">
     </a>
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="../the-editor/">
+        <a class="post-card-content-link" href="../welcome/">
 
             <header class="post-card-header">
                     <span class="post-card-tags">官方文章</span>
-                <h2 class="post-card-title">Writing posts with Ghost ✍️</h2>
+                <h2 class="post-card-title">Welcome to Ghost</h2>
             </header>
 
             <section class="post-card-excerpt">
-                <p>Discover familiar formatting options in a functional toolbar and the ability to add dynamic content seamlessly.</p>
+                <p>Welcome, it's great to have you here. We know that first impressions are important, so we've populated your new site with some initial getting started posts that will help you get familiar with everything in no time.</p>
             </section>
 
         </a>
@@ -371,16 +384,16 @@ We know that first impressions are important, so we've populated your new site w
         </a>
     </div>
     <span class="floating-header-divider">—</span>
-    <div class="floating-header-title">Welcome to Ghost</div>
+    <div class="floating-header-title">Enumeration与Iterator接口</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Welcome%20to%20Ghost&amp;url=http://localhost:2373/welcome/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Enumeration%E4%B8%8EIterator%E6%8E%A5%E5%8F%A3&amp;url=http://localhost:2373/enumeration-iterator/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2373/welcome/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2373/enumeration-iterator/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
         </a>
     </div>
