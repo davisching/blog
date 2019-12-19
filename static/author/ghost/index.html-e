@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=d463193414">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=3fd4113c12">
 
     <meta name="description" content="You can delete this user to remove all the welcome posts">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
@@ -75,7 +75,8 @@
     
     .post-full-content h1, .post-full-content h2,
     .post-full-content h3, .post-full-content h4,
-    .post-full-content h5, .post-full-content h6 {
+    .post-full-content h5, .post-full-content h6,
+    .post-card-excerpt > p {
         font-family:"Noto Serif SC", sans-serif;
     }
     
@@ -537,9 +538,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=d463193414"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=3fd4113c12"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=d463193414"></script>
+    <script src="../../assets/built/infinitescroll.js?v=3fd4113c12"></script>
 
     
 
