@@ -14,17 +14,17 @@
     <meta property="og:site_name" content="Davis Ching">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Enumeration与Iterator接口">
-    <meta property="og:description" content="本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了 Iterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为 Enumeration 增加了 asIterator() 方法，允许将它转化为">
+    <meta property="og:description" content="本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了 Iterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为 Enumeration 增加了 asIterator() 方法，">
     <meta property="og:url" content="http://localhost:2373/enumeration-iterator/">
     <meta property="og:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-68300.jpg">
     <meta property="article:published_time" content="2019-12-16T14:05:00.000Z">
-    <meta property="article:modified_time" content="2019-12-19T14:20:07.000Z">
+    <meta property="article:modified_time" content="2019-12-21T05:28:45.000Z">
     <meta property="article:tag" content="超大杯Americano ，加两份源码">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Enumeration与Iterator接口">
-    <meta name="twitter:description" content="本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了 Iterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为 Enumeration 增加了 asIterator() 方法，允许将它转化为">
+    <meta name="twitter:description" content="本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了 Iterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为 Enumeration 增加了 asIterator() 方法，">
     <meta name="twitter:url" content="http://localhost:2373/enumeration-iterator/">
     <meta name="twitter:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-68300.jpg">
     <meta name="twitter:label1" content="Written by">
@@ -64,7 +64,7 @@
     "headline": "Enumeration与Iterator接口",
     "url": "http://localhost:2373/enumeration-iterator/",
     "datePublished": "2019-12-16T14:05:00.000Z",
-    "dateModified": "2019-12-19T14:20:07.000Z",
+    "dateModified": "2019-12-21T05:28:45.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:2373/content/images/2019/12/thumb-1920-68300.jpg",
@@ -72,7 +72,7 @@
         "height": 1200
     },
     "keywords": "超大杯Americano ，加两份源码",
-    "description": "&gt; 本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。\n\n\nEnumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：\n\n * boolean hasMoreElements() - 判断是否还有未遍历的元素\n * E nextElement() - 返回一个元素，且该元素应该被视为已遍历\n\n在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了\nIterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为\nEnumeration 增加了 asIterator() 方法，允许将它转化为 Iterator 来使用。\n\npackage java.util;\n\npublic interface Enumeration&lt;E&gt; {\n\n    boolean hasMoreElements();\n\n    E nextEl",
+    "description": "&gt; 本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。\n\n\nEnumeration\nEnumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：\n\n * boolean hasMoreElements() - 判断是否还有未遍历的元素\n * E nextElement() - 返回一个元素，且该元素应该被视为已遍历\n\n在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了\nIterator 接口，增加了移除元素的功能，同时缩短了命名。官方也在文档中也推荐 Iterator 作为之后的继承方案。在 Java 9 推出后，同时为\nEnumeration 增加了 asIterator() 方法，允许将它转化为 Iterator 来使用。\n\npackage java.util;\n\npublic interface Enumeration&lt;E&gt; {\n\n    boolean hasMoreElements();\n\n",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2373/"
@@ -118,6 +118,7 @@
                 <blockquote>
 <p>本节将对 <strong>Enumeration 及 Iterator 接口</strong>进行源码阅读，Java 版本为 13。</p>
 </blockquote>
+<h1 id="enumeration">Enumeration</h1>
 <p>Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：</p>
 <ul>
 <li>boolean hasMoreElements() - 判断是否还有未遍历的元素</li>
@@ -148,7 +149,37 @@ public interface Enumeration&lt;E&gt; {
 <pre><code class="language-java">   for (Enumeration&lt;E&gt; e = v.elements(); e.hasMoreElements();)
        System.out.println(e.nextElement());
 </code></pre>
-<p>。。。</p>
+<p>总结来说，Enumeration的实现类应可被遍历。</p>
+<h1 id="iterator">Iterator</h1>
+<p>接下来分析 Iterator，它将原本的 hasMoreElements 改为了 hasNext，nextElement 改为了 next，并增加了 remove 方法以及 forEachRemaining 作为一种遍历的方法。</p>
+<pre><code class="language-java">package java.util;
+
+import java.util.function.Consumer;
+
+public interface Iterator&lt;E&gt; {
+
+    boolean hasNext();
+
+    E next();
+
+    default void remove() {
+        throw new UnsupportedOperationException("remove");
+    }
+
+    default void forEachRemaining(Consumer&lt;? super E&gt; action) {
+        Objects.requireNonNull(action);
+        while (hasNext())
+            action.accept(next());
+    }
+}
+</code></pre>
+<p>这里的 remove 方法默认的写了一个「异常」，如果该方法没有重写，调用时则会将这个异常抛出。而 forEachRemaining 允许丢入一个 Consumer 的实现，在 Consumer 的 accept 方法中描述要怎么处理依次所有元素。但这个方法完全可以被 lamda 表达式代替。</p>
+<p>另外提一下 <code>? super E</code> 指的是，可以丢入 E 或 E 的 super classes。</p>
+<blockquote>
+<p>总结：</p>
+<p>Enumeration: hasMoreElements() -&gt; nextElements() -&gt; 被 Iterator 替代 - - asIterator()</p>
+<p>Iterator: hasNext() -&gt; next() -&gt; 增加 remove() -- default 抛异常 -&gt; forEachRemaining() -- 创建一个 Consumer 的实例进行遍历。</p>
+</blockquote>
 <blockquote>
 <p>官方文档：</p>
 <p><a href="https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/Enumeration.html">https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/Enumeration.html</a></p>

@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=3fd4113c12">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=bbbf636971">
 
     <meta name="description" content="「超大杯Americano ，加两份源码」系列是笔者阅读源码时候的笔记，该系列将从Java的一些常用类开始，到Spring的一些内容，不断增加个人对这些基础的了解。其中，Java 源码版本采用 Java 13。">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
@@ -194,7 +194,7 @@
             </header>
 
             <section class="post-card-excerpt">
-                <p>本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，推出了</p>
+                <p>本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，</p>
             </section>
 
         </a>
@@ -252,9 +252,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=3fd4113c12"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=bbbf636971"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=3fd4113c12"></script>
+    <script src="../../assets/built/infinitescroll.js?v=bbbf636971"></script>
 
     
 

@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="assets/built/screen.css?v=3fd4113c12">
+    <link rel="stylesheet" type="text/css" href="assets/built/screen.css?v=bbbf636971">
 
     <meta name="description" content="Hello!，欢迎来到 Davis Ching（景詩維）的个人博客！作为一个 Java Web 工程师，我将会在这里分享一些心得，也会记录一些学习笔记，甚至会有日常生活的记录。欢迎大家一起学习，一起进步！Good Day！">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -28,8 +28,6 @@
     <meta name="twitter:url" content="http://localhost:2373/">
     <meta name="twitter:image" content="https://static.ghost.org/v3.0.0/images/publication-cover.png">
     <meta name="twitter:site" content="@tryghost">
-    <meta property="og:image:width" content="2709">
-    <meta property="og:image:height" content="938">
     
     <script type="application/ld+json">
 {
@@ -46,12 +44,7 @@
         }
     },
     "url": "http://localhost:2373/",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://static.ghost.org/v3.0.0/images/publication-cover.png",
-        "width": 2709,
-        "height": 938
-    },
+    "image": "https://static.ghost.org/v3.0.0/images/publication-cover.png",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2373/"
@@ -531,6 +524,96 @@
     </div>
 
 </article>
+                    <article class="post-card post tag-problem-solved-yeah ">
+
+    <a class="post-card-image-link" href="solve-mysql-time-zone/">
+        <img class="post-card-image" srcset="content/images/size/w300/2019/12/thumb-1920-692053.jpg 300w,
+                   content/images/size/w600/2019/12/thumb-1920-692053.jpg 600w,
+                  content/images/size/w1000/2019/12/thumb-1920-692053.jpg 1000w,
+                 content/images/size/w2000/2019/12/thumb-1920-692053.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="content/images/size/w600/2019/12/thumb-1920-692053.jpg" alt="[解决] MySQL数据库时区问题">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="solve-mysql-time-zone/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">吃我一套「解决拳」！</span>
+                <h2 class="post-card-title">[解决] MySQL数据库时区问题</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Davis · 景詩維 
+                    </div>
+
+                        <a href="author/davis/" class="static-avatar">
+                            <img class="author-profile-image" src="content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
+                        </a>
+                </li>
+            </ul>
+
+            <span class="post-date">Sunday December 23 2018</span>
+        </footer>
+
+    </div>
+
+</article>
+                    <article class="post-card post tag-problem-solved-yeah ">
+
+    <a class="post-card-image-link" href="solve-table-configuration-users-matched-more-than-one-table-mybatis-generator/">
+        <img class="post-card-image" srcset="content/images/size/w300/2019/12/thumb-1920-706619.jpg 300w,
+                   content/images/size/w600/2019/12/thumb-1920-706619.jpg 600w,
+                  content/images/size/w1000/2019/12/thumb-1920-706619.jpg 1000w,
+                 content/images/size/w2000/2019/12/thumb-1920-706619.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="content/images/size/w600/2019/12/thumb-1920-706619.jpg" alt="[解决] Table Configuration users matched more than one table (Mybatis Generator)">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="solve-table-configuration-users-matched-more-than-one-table-mybatis-generator/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">吃我一套「解决拳」！</span>
+                <h2 class="post-card-title">[解决] Table Configuration users matched more than one table (Mybatis Generator)</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>解决了 SpringBoot 开发时，Mybatis Generator中同名表问题。</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Davis · 景詩維 
+                    </div>
+
+                        <a href="author/davis/" class="static-avatar">
+                            <img class="author-profile-image" src="content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
+                        </a>
+                </li>
+            </ul>
+
+            <span class="post-date">Sunday December 23 2018</span>
+        </footer>
+
+    </div>
+
+</article>
             </div>
         </div>
 
@@ -565,9 +648,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="assets/built/jquery.fitvids.js?v=3fd4113c12"></script>
+    <script type="text/javascript" src="assets/built/jquery.fitvids.js?v=bbbf636971"></script>
 
-    <script src="assets/built/infinitescroll.js?v=3fd4113c12"></script>
+    <script src="assets/built/infinitescroll.js?v=bbbf636971"></script>
 
     
 
