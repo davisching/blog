@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=bbbf636971">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=d10e649258">
 
     <meta name="description" content="「超大杯Americano ，加两份源码」系列是笔者阅读源码时候的笔记，该系列将从Java的一些常用类开始，到Spring的一些内容，不断增加个人对这些基础的了解。其中，Java 源码版本采用 Java 13。">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
@@ -177,24 +177,24 @@
         <div class="post-feed">
                 <article class="post-card post tag-source-code-reading ">
 
-    <a class="post-card-image-link" href="../../enumeration-iterator/">
-        <img class="post-card-image" srcset="../../content/images/size/w300/2019/12/thumb-1920-68300.jpg 300w,
-                   ../../content/images/size/w600/2019/12/thumb-1920-68300.jpg 600w,
-                  ../../content/images/size/w1000/2019/12/thumb-1920-68300.jpg 1000w,
-                 ../../content/images/size/w2000/2019/12/thumb-1920-68300.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2019/12/thumb-1920-68300.jpg" alt="Enumeration与Iterator接口">
+    <a class="post-card-image-link" href="../../java-source-code-reading/">
+        <img class="post-card-image" srcset="../../content/images/size/w300/2019/12/thumb-1920-68300-1.jpg 300w,
+                   ../../content/images/size/w600/2019/12/thumb-1920-68300-1.jpg 600w,
+                  ../../content/images/size/w1000/2019/12/thumb-1920-68300-1.jpg 1000w,
+                 ../../content/images/size/w2000/2019/12/thumb-1920-68300-1.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2019/12/thumb-1920-68300-1.jpg" alt="Java 源码阅读（思维导图版）">
     </a>
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="../../enumeration-iterator/">
+        <a class="post-card-content-link" href="../../java-source-code-reading/">
 
             <header class="post-card-header">
                     <span class="post-card-tags">超大杯Americano ，加两份源码</span>
-                <h2 class="post-card-title">Enumeration与Iterator接口</h2>
+                <h2 class="post-card-title">Java 源码阅读（思维导图版）</h2>
             </header>
 
             <section class="post-card-excerpt">
-                <p>本节将对 Enumeration 及 Iterator 接口进行源码阅读，Java 版本为 13。  Enumeration Enumeration 接口指定了它的实现类，应该具备「遍历」的行为。因此它指定了两种行为：  boolean hasMoreElements() - 判断是否还有未遍历的元素 E nextElement() - 返回一个元素，且该元素应该被视为已遍历 在 Enumeration 推出三年后，官方发现有些实现类需要在遍历的时候，同时移除掉那些元素，并且 Enumeration 中的命名又太冗长了。因此，</p>
+                <p>本文将用思维导图的形式，对 Core Java的主要接口和类进行源码阅读后的提炼工作，通过思维导图，更方便对其复习。本文采用的 java 版本是13。</p>
             </section>
 
         </a>
@@ -214,7 +214,7 @@
                 </li>
             </ul>
 
-            <span class="post-date">Monday December 16 2019</span>
+            <span class="post-date">Wednesday December 25 2019</span>
         </footer>
 
     </div>
@@ -252,9 +252,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=bbbf636971"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=d10e649258"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=bbbf636971"></script>
+    <script src="../../assets/built/infinitescroll.js?v=d10e649258"></script>
 
     
 
