@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=d10e649258">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=0c7d31ba22">
 
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
     <link rel="canonical" href="index.html">
@@ -65,9 +65,7 @@
         color: #373737;
         font-family: 'Lobster', cursive;
     }
-</style>
 
-<style> 
     body,
     .post-content,
     .post-full-content a,
@@ -88,6 +86,11 @@
     pre, .post-full-content pre {
     background: #2d2d2d;
     }
+    
+    .nav .nav-shua-xin-man-guo-nei-ban a {
+       color: #7d2d2d;
+    }
+    
 </style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/tomorrow-night-eighties.min.css" rel="stylesheet">
 
@@ -111,9 +114,9 @@
         </div>
             <ul class="nav" role="menu">
     <li class="nav-bo-ke-shou-ye" role="menuitem"><a href="../../">博客首页</a></li>
-    <li class="nav-guan-fang-wen-zhang nav-current" role="menuitem"><a href="index.html">官方文章</a></li>
-    <li class="nav-bi-zhe" role="menuitem"><a href="../../author/davis/">笔者</a></li>
-    <li class="nav-guan-fang-wen-dang" role="menuitem"><a href="https://ghost.org/docs/">官方文档</a></li>
+    <li class="nav-ge-ren-zi-liao" role="menuitem"><a href="../../author/davis/">个人资料</a></li>
+    <li class="nav-jie-jue-hui-zong" role="menuitem"><a href="../problem-solved-yeah/">解决汇总</a></li>
+    <li class="nav-shua-xin-man-guo-nei-ban" role="menuitem"><a href="http://davisching.gitee.io">刷新慢？国内版</a></li>
 </ul>
 
         <div class="site-nav-right">
@@ -514,9 +517,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=d10e649258"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=0c7d31ba22"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=d10e649258"></script>
+    <script src="../../assets/built/infinitescroll.js?v=0c7d31ba22"></script>
 
     
 

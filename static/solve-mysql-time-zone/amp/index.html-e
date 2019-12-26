@@ -16,9 +16,9 @@
     <meta property="og:title" content="[解决] MySQL数据库时区问题">
     <meta property="og:description" content="在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。">
     <meta property="og:url" content="http://localhost:2373/solve-mysql-time-zone/">
-    <meta property="og:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-692053.jpg">
+    <meta property="og:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg">
     <meta property="article:published_time" content="2018-12-23T08:41:00.000Z">
-    <meta property="article:modified_time" content="2019-12-23T08:47:54.000Z">
+    <meta property="article:modified_time" content="2019-12-26T09:59:44.000Z">
     <meta property="article:tag" content="吃我一套「解决拳」！">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="[解决] MySQL数据库时区问题">
     <meta name="twitter:description" content="在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。">
     <meta name="twitter:url" content="http://localhost:2373/solve-mysql-time-zone/">
-    <meta name="twitter:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-692053.jpg">
+    <meta name="twitter:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Davis · 景詩維 ">
     <meta name="twitter:label2" content="Filed under">
@@ -64,10 +64,10 @@
     "headline": "[解决] MySQL数据库时区问题",
     "url": "http://localhost:2373/solve-mysql-time-zone/",
     "datePublished": "2018-12-23T08:41:00.000Z",
-    "dateModified": "2019-12-23T08:47:54.000Z",
+    "dateModified": "2019-12-26T09:59:44.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2373/content/images/2019/12/thumb-1920-692053.jpg",
+        "url": "http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg",
         "width": 1920,
         "height": 1080
     },
@@ -111,7 +111,7 @@
                 </section>
             </header>
             <figure class="post-image">
-                <amp-img src="http://localhost:2373/content/images/2019/12/thumb-1920-692053.jpg" width="600" height="400" layout="responsive"></amp-img>
+                <amp-img src="http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg" width="600" height="400" layout="responsive"></amp-img>
             </figure>
             <section class="post-content">
 

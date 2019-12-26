@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="assets/built/screen.css?v=d10e649258">
+    <link rel="stylesheet" type="text/css" href="assets/built/screen.css?v=0c7d31ba22">
 
     <meta name="description" content="Hello!，欢迎来到 Davis Ching（景詩維）的个人博客！作为一个 Java Web 工程师，我将会在这里分享一些心得，也会记录一些学习笔记，甚至会有日常生活的记录。欢迎大家一起学习，一起进步！Good Day！">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -72,9 +72,7 @@
         color: #373737;
         font-family: 'Lobster', cursive;
     }
-</style>
 
-<style> 
     body,
     .post-content,
     .post-full-content a,
@@ -95,6 +93,11 @@
     pre, .post-full-content pre {
     background: #2d2d2d;
     }
+    
+    .nav .nav-shua-xin-man-guo-nei-ban a {
+       color: #7d2d2d;
+    }
+    
 </style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/tomorrow-night-eighties.min.css" rel="stylesheet">
 
@@ -118,9 +121,9 @@
         </div>
             <ul class="nav" role="menu">
     <li class="nav-bo-ke-shou-ye nav-current" role="menuitem"><a href="index.html">博客首页</a></li>
-    <li class="nav-guan-fang-wen-zhang" role="menuitem"><a href="tag/getting-started/">官方文章</a></li>
-    <li class="nav-bi-zhe" role="menuitem"><a href="author/davis/">笔者</a></li>
-    <li class="nav-guan-fang-wen-dang" role="menuitem"><a href="https://ghost.org/docs/">官方文档</a></li>
+    <li class="nav-ge-ren-zi-liao" role="menuitem"><a href="author/davis/">个人资料</a></li>
+    <li class="nav-jie-jue-hui-zong" role="menuitem"><a href="tag/problem-solved-yeah/">解决汇总</a></li>
+    <li class="nav-shua-xin-man-guo-nei-ban" role="menuitem"><a href="http://davisching.gitee.io">刷新慢？国内版</a></li>
 </ul>
 
         <div class="site-nav-right">
@@ -534,10 +537,10 @@
                     <article class="post-card post tag-problem-solved-yeah ">
 
     <a class="post-card-image-link" href="solve-mysql-time-zone/">
-        <img class="post-card-image" srcset="content/images/size/w300/2019/12/thumb-1920-692053.jpg 300w,
-                   content/images/size/w600/2019/12/thumb-1920-692053.jpg 600w,
-                  content/images/size/w1000/2019/12/thumb-1920-692053.jpg 1000w,
-                 content/images/size/w2000/2019/12/thumb-1920-692053.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="content/images/size/w600/2019/12/thumb-1920-692053.jpg" alt="[解决] MySQL数据库时区问题">
+        <img class="post-card-image" srcset="content/images/size/w300/2019/12/thumb-1920-87489.jpg 300w,
+                   content/images/size/w600/2019/12/thumb-1920-87489.jpg 600w,
+                  content/images/size/w1000/2019/12/thumb-1920-87489.jpg 1000w,
+                 content/images/size/w2000/2019/12/thumb-1920-87489.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="content/images/size/w600/2019/12/thumb-1920-87489.jpg" alt="[解决] MySQL数据库时区问题">
     </a>
 
     <div class="post-card-content">
@@ -655,9 +658,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="assets/built/jquery.fitvids.js?v=d10e649258"></script>
+    <script type="text/javascript" src="assets/built/jquery.fitvids.js?v=0c7d31ba22"></script>
 
-    <script src="assets/built/infinitescroll.js?v=d10e649258"></script>
+    <script src="assets/built/infinitescroll.js?v=0c7d31ba22"></script>
 
     
 
