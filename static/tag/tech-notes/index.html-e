@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=1d90e817bd">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=946df7dec4">
 
     <meta name="description" content="「自封的首席技术专栏」系列是本人对一些开发或学习过程中，结合的经验与过程的记录，与小伙伴们交流分享，相互学习。">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
@@ -178,6 +178,51 @@
 <main id="site-main" class="site-main outer">
     <div class="inner">
         <div class="post-feed">
+                <article class="post-card post tag-tech-notes ">
+
+    <a class="post-card-image-link" href="../../modu-recommend/">
+        <img class="post-card-image" srcset="../../content/images/size/w300/2020/01/thumb-1920-596492.jpg 300w,
+                   ../../content/images/size/w600/2020/01/thumb-1920-596492.jpg 600w,
+                  ../../content/images/size/w1000/2020/01/thumb-1920-596492.jpg 1000w,
+                 ../../content/images/size/w2000/2020/01/thumb-1920-596492.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/01/thumb-1920-596492.jpg" alt="给娜姐和妹姐の魔都最全大推荐">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../modu-recommend/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">自封的首席技术专栏</span>
+                <h2 class="post-card-title">给娜姐和妹姐の魔都最全大推荐</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>欢迎语 - 欢迎来到这个魔幻且花一天就能逛遍三遍的国际大都市！这里除了有贵到六十年都还不完房价，还有上百家不知道谁才买的起的奢侈品店，光是apple store就开了7间，左转右转就来一个大型商场，真的是太社会主义了！言归正传，欢迎来到魔都上海！（刷新慢请点上方国内版）  推荐列表 外滩 ｜陆家嘴｜豫园（小笼包必吃）｜淮海中路一带（新天地、k11、iapm）｜星巴克工厂店及其附近｜静安寺｜世博源（弱推荐）｜武康路与徐家汇（推荐一家上海菜）｜海伦路一带与1933老厂房 ｜蟹宴与小龙虾｜其他美食 ｜ 其他 外滩外滩这地儿是去上海打卡的必去地点，这里除了百年的万国建筑博览群，</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Davis · 景詩維 
+                    </div>
+
+                        <a href="../../author/davis/" class="static-avatar">
+                            <img class="author-profile-image" src="../../content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
+                        </a>
+                </li>
+            </ul>
+
+            <span class="post-date">Monday January 06 2020</span>
+        </footer>
+
+    </div>
+
+</article>
                 <article class="post-card post tag-tech-notes featured ">
 
     <a class="post-card-image-link" href="../../ghost-on-github-pages/">
@@ -229,7 +274,7 @@
 
         <footer class="site-footer outer">
     <div class="site-footer-content inner">
-        <section class="copyright"><a href="../../">Davis Ching</a> © 2019</section>
+        <section class="copyright"><a href="../../">Davis Ching</a> © 2020</section>
         <nav class="site-footer-nav">
             <a href="../../">Latest Posts</a>
             <a href="https://www.facebook.com/ghost" target="_blank" rel="noopener">Facebook</a>
@@ -255,9 +300,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=1d90e817bd"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=946df7dec4"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=1d90e817bd"></script>
+    <script src="../../assets/built/infinitescroll.js?v=946df7dec4"></script>
 
     
 
