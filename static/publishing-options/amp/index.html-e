@@ -18,7 +18,7 @@
     <meta property="og:url" content="http://localhost:2373/publishing-options/">
     <meta property="og:image" content="https://static.ghost.org/v3.0.0/images/publishing-options.png">
     <meta property="article:published_time" content="2019-12-16T10:07:39.000Z">
-    <meta property="article:modified_time" content="2019-12-16T10:07:35.000Z">
+    <meta property="article:modified_time" content="2020-01-20T11:49:02.000Z">
     <meta property="article:tag" content="官方文章">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
@@ -70,7 +70,7 @@
     "headline": "Publishing options",
     "url": "http://localhost:2373/publishing-options/",
     "datePublished": "2019-12-16T10:07:39.000Z",
-    "dateModified": "2019-12-16T10:07:35.000Z",
+    "dateModified": "2020-01-20T11:49:02.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://static.ghost.org/v3.0.0/images/publishing-options.png",
@@ -143,7 +143,7 @@
     "description": "The Ghost editor has everything you need to fully optimise your content. This is where you can add tags and authors, feature a post, or turn a post into a page.",
     }
 }
-    </code></pre><p>You can test that the structured data <a href="https://schema.org/">schema</a> on your site is working as it should using <a href="https://search.google.com/structured-data/testing-tool" rel="noreferrer nofollow noopener">Google’s structured data tool</a>. </p><h2 id="code-injection">Code injection</h2><p>This tool allows you to inject code on a per post or page basis, or across your entire site. This means you can modify CSS, add unique tracking codes, or add other scripts to the head or foot of your publication without making edits to your theme files. </p><p><strong>To add code site-wide</strong>, use the code injection tool in the main admin menu. This is useful for adding a Google Analytics tracking code, or to start tracking with any other analytics tool.</p><p><strong>To add code to a post or page</strong>, use the code injection tool within the post settings menu. This is useful if you want to add art direction, scripts or styles that are only applicable to one post or page.</p><h2 id="next-admin-settings">Next: Admin settings</h2><p>Now you understand how to create and optimise content, let's explore some <a href="../../admin-settings/">admin settings</a> so you can invite your team and start collaborating.</p>
+    </code></pre><p>You can test that the structured data <a href="https://schema.org/">schema</a> on your site is working as it should using <a href="https://search.google.com/structured-data/testing-tool" rel="noreferrer nofollow noopener">Google’s structured data tool</a>. </p><h2 id="code-injection">Code injection</h2><p>This tool allows you to inject code on a per post or page basis, or across your entire site. This means you can modify CSS, add unique tracking codes, or add other scripts to the head or foot of your publication without making edits to your theme files. </p><p><strong>To add code site-wide</strong>, use the code injection tool in the main admin menu. This is useful for adding a Google Analytics tracking code, or to start tracking with any other analytics tool.</p><p><strong>To add code to a post or page</strong>, use the code injection tool within the post settings menu. This is useful if you want to add art direction, scripts or styles that are only applicable to one post or page.</p><h2 id="next-admin-settings">Next: Admin settings</h2><p>Now you understand how to create and optimise content, let's explore some <a href="http://localhost:2373/admin-settings/">admin settings</a> so you can invite your team and start collaborating.</p>
 
             </section>
 

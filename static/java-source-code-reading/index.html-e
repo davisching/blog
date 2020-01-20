@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=946df7dec4">
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=e7b09ea9be">
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="canonical" href="index.html">
@@ -245,26 +245,26 @@
     <div class="inner">
         <div class="read-next-feed">
 
-                <article class="post-card post tag-tech-notes ">
+                <article class="post-card post tag-problem-solved-yeah ">
 
-    <a class="post-card-image-link" href="../modu-recommend/">
-        <img class="post-card-image" srcset="../content/images/size/w300/2020/01/thumb-1920-596492.jpg 300w,
-                   ../content/images/size/w600/2020/01/thumb-1920-596492.jpg 600w,
-                  ../content/images/size/w1000/2020/01/thumb-1920-596492.jpg 1000w,
-                 ../content/images/size/w2000/2020/01/thumb-1920-596492.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2020/01/thumb-1920-596492.jpg" alt="给娜姐和妹姐の魔都最全大推荐">
+    <a class="post-card-image-link" href="../host-key-verification-failed/">
+        <img class="post-card-image" srcset="../content/images/size/w300/2020/01/Snip20200120_1.png 300w,
+                   ../content/images/size/w600/2020/01/Snip20200120_1.png 600w,
+                  ../content/images/size/w1000/2020/01/Snip20200120_1. png 1000w,
+                 ../content/images/size/w2000/2020/01/Snip20200120_1.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2020/01/Snip20200120_1.png" alt="[解决]ssh 时 Host key verification failed">
     </a>
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="../modu-recommend/">
+        <a class="post-card-content-link" href="../host-key-verification-failed/">
 
             <header class="post-card-header">
-                    <span class="post-card-tags">自封的首席技术专栏</span>
-                <h2 class="post-card-title">给娜姐和妹姐の魔都最全大推荐</h2>
+                    <span class="post-card-tags">吃我一套「解决拳」！</span>
+                <h2 class="post-card-title">[解决]ssh 时 Host key verification failed</h2>
             </header>
 
             <section class="post-card-excerpt">
-                <p>欢迎语 - 欢迎来到这个魔幻且花一天就能逛遍三遍的国际大都市！这里除了有贵到六十年都还不完房价，还有上百家不知道谁才买的起的奢侈品店，光是apple store就开了7间，左转右转就来一个大型商场，真的是太社会主义了！言归正传，欢迎来到魔都上海！（刷新慢请点上方国内版）  推荐列表 外滩 ｜陆家嘴｜豫园（小笼包必吃）｜淮海中路一带（新天地、k11、iapm）｜星巴克工厂店及其附近｜静安寺｜世博源（弱推荐）｜武康路与徐家汇（推荐一家上海菜）｜海伦路一带与1933老厂房 ｜蟹宴与小龙虾｜其他美食 ｜ 其他 外滩外滩这地儿是去上海打卡的必去地点，这里除了百年的万国建筑博览群，</p>
+                <p>解决 ssh 时 Host key verification failed 方法。</p>
             </section>
 
         </a>
@@ -284,7 +284,7 @@
                 </li>
             </ul>
 
-            <span class="post-date">Monday January 06 2020</span>
+            <span class="post-date">Monday January 20 2020</span>
         </footer>
 
     </div>
@@ -398,7 +398,7 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=946df7dec4"></script>
+    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=e7b09ea9be"></script>
 
 
     <script>
