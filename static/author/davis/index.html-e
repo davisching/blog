@@ -160,7 +160,7 @@
                 <img class="author-profile-image" src="../../content/images/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
             <h1 class="site-title">Davis · 景詩維 </h1>
             <div class="author-meta">
-                    <div class="author-location">上海｜台北 <span class="bull">•</span></div>
+                    <div class="author-location">來自臺北市的菜鳥工程師 <span class="bull">•</span></div>
                 <div class="author-stats">
                     8 posts <span class="bull">•</span>
                 </div>
@@ -178,10 +178,10 @@
                 <article class="post-card post tag-hello-java-dev ">
 
     <a class="post-card-image-link" href="../../distributed-system-01/">
-        <img class="post-card-image" srcset="../../content/images/size/w300/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg 300w,
-                   ../../content/images/size/w600/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpegg 600w,
-                  ../../content/images/size/w1000/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpegeg 1000w,
-                 ../../content/images/size/w2000/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpegpeg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg" alt="分散式系統 - 學習筆記 - 壹">
+        <img class="post-card-image" srcset="../../content/images/size/w300/2020/03/Snip20200314_5.png 300w,
+                   ../../content/images/size/w600/2020/03/Snip20200314_5.png 600w,
+                  ../../content/images/size/w1000/2020/03/Snip20200314_5. png 1000w,
+                 ../../content/images/size/w2000/2020/03/Snip20200314_5.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/03/Snip20200314_5.png" alt="分散式系統 - 學習筆記 - 壹">
     </a>
 
     <div class="post-card-content">

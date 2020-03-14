@@ -20,9 +20,9 @@
     <meta property="og:title" content="分散式系統 - 學習筆記 - 壹">
     <meta property="og:description" content="本章開始對分散式系統進行再一次的學習，該篇是對分散式系統相關內容的學習筆記，將會紀錄一些基本知識。">
     <meta property="og:url" content="http://localhost:2373/distributed-system-01/">
-    <meta property="og:image" content="http://localhost:2373/content/images/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg">
+    <meta property="og:image" content="http://localhost:2373/content/images/2020/03/Snip20200314_5.png">
     <meta property="article:published_time" content="2020-03-14T08:22:28.000Z">
-    <meta property="article:modified_time" content="2020-03-14T08:33:25.000Z">
+    <meta property="article:modified_time" content="2020-03-14T09:10:55.000Z">
     <meta property="article:tag" content="侬好，Java Dev">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
@@ -30,14 +30,14 @@
     <meta name="twitter:title" content="分散式系統 - 學習筆記 - 壹">
     <meta name="twitter:description" content="本章開始對分散式系統進行再一次的學習，該篇是對分散式系統相關內容的學習筆記，將會紀錄一些基本知識。">
     <meta name="twitter:url" content="http://localhost:2373/distributed-system-01/">
-    <meta name="twitter:image" content="http://localhost:2373/content/images/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg">
+    <meta name="twitter:image" content="http://localhost:2373/content/images/2020/03/Snip20200314_5.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Davis · 景詩維 ">
     <meta name="twitter:label2" content="Filed under">
     <meta name="twitter:data2" content="侬好，Java Dev">
     <meta name="twitter:site" content="@tryghost">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="720">
+    <meta property="og:image:width" content="2506">
+    <meta property="og:image:height" content="1370">
     
     <script type="application/ld+json">
 {
@@ -68,12 +68,12 @@
     "headline": "分散式系統 - 學習筆記 - 壹",
     "url": "http://localhost:2373/distributed-system-01/",
     "datePublished": "2020-03-14T08:22:28.000Z",
-    "dateModified": "2020-03-14T08:33:25.000Z",
+    "dateModified": "2020-03-14T09:10:55.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2373/content/images/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg",
-        "width": 1280,
-        "height": 720
+        "url": "http://localhost:2373/content/images/2020/03/Snip20200314_5.png",
+        "width": 2506,
+        "height": 1370
     },
     "keywords": "侬好，Java Dev",
     "description": "本章開始對分散式系統進行再一次的學習，該篇是對分散式系統相關內容的學習筆記，將會紀錄一些基本知識。",
@@ -202,17 +202,17 @@
                     </section>
                     <h1 class="post-full-title">分散式系統 - 學習筆記 - 壹</h1>
                 </div>
-                <img srcset="../content/images/size/w300/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg 300w,
-                           ../content/images/size/w600/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpegg 600w,
-                          ../content/images/size/w1000/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpegeg 1000w,
-                         ../content/images/size/w2000/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpegpeg 2000w" sizes="(max-width: 800px) 400px,
+                <img srcset="../content/images/size/w300/2020/03/Snip20200314_5.png 300w,
+                           ../content/images/size/w600/2020/03/Snip20200314_5.png 600w,
+                          ../content/images/size/w1000/2020/03/Snip20200314_5. png 1000w,
+                         ../content/images/size/w2000/2020/03/Snip20200314_5. png 2000w" sizes="(max-width: 800px) 400px,
                             (max-width: 1170px) 700px,
-                            1400px" src="../content/images/size/w2000/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg" alt="分散式系統 - 學習筆記 - 壹">
+                            1400px" src="../content/images/size/w2000/2020/03/Snip20200314_5.png" alt="分散式系統 - 學習筆記 - 壹">
             </figure>
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <blockquote>雖然本人碩士所在學校 - 墨爾本大學 - 在分散式系統的研究上碩果累累，且在世界上佔有一定程度的地位。但他教給我們的也只是一些理論的皮毛、一些較老的工具以及十分簡單的實踐架構。因此在本人軍事訓練放假之餘，決定對分散式系統進行一定程度的複習與擴展學習。本章將開始這一系列的學習紀錄，並收錄一些分散式系統的基礎知識。</blockquote><h2 id="01-">01. 什麼是分散式系統，它的優點是什麼？</h2><p></p><p>用我自己的話來概括就是：「<strong>由多硬體組成的單一軟體。</strong>」至於它的優點，因為它分散的各個節點互相獨立，因此<strong>擁有更優的可擴展性</strong>（即更易擴充與升級）<strong>、可用性與安全性等</strong>。</p><p>詳細的來說：集中式系統，有別於分散式系統，雖然更易維護與開發，但是一旦系統出現問題，就會造成這個軟體的故障。比如伺服器的故障或是一個重要功能的更新，都會造成網站或應用的暫時停擺，直到新的更新或伺服器的重啓。因此，集中式系統對於單個伺服器硬體的要求也非常高。而分散式系統正好能夠擺脫這些困擾。</p>
+                    <blockquote>雖然本人碩士所在學校 - 墨爾本大學 - 在分散式系統的研究上碩果累累，且在世界上佔有一定程度的地位。但他教給我們的也只是一些理論的皮毛、一些較老的工具以及十分簡單的實踐架構。因此在本人軍事訓練放假之餘，決定對分散式系統進行一定程度的複習與擴展學習。本章將開始這一系列的學習紀錄，並收錄一些分散式系統的基礎知識。</blockquote><h2 id="01-">01. 什麼是分散式系統，它的優點是什麼？</h2><p>用我自己的話來概括就是：「<strong>由多硬體組成的單一軟體。</strong>」至於它的優點，因為它分散的各個節點互相獨立，因此<strong>擁有更優的可擴展性</strong>（即更易擴充與升級）<strong>、可用性與安全性等</strong>。</p><p>詳細的來說：集中式系統，有別於分散式系統，雖然更易維護與開發，但是一旦系統出現問題，就會造成這個軟體的故障。比如伺服器的故障或是一個重要功能的更新，都會造成網站或應用的暫時停擺，直到新的更新或伺服器的重啓。因此，集中式系統對於單個伺服器硬體的要求也非常高。而分散式系統正好能夠擺脫這些困擾。</p><h2 id="02-">02. 分散式系統的設計原則</h2><p>將一個應用的架構從集中式拆分為多個子系統，就是一個分散式系統的設計過程。因此，除了需要注意系統的<strong>可擴展性、可用性、安全性</strong>以外，最重要的就是<strong>保障資料的一致性 </strong>- 因為多系統之間的互通難免會存在時間差與bug，為了在資料儲存上不出現問題，一致性是十分重要的。</p><p>其他準則，在《巨型公司的網路架構：分散式系統內部解密》一書中，我節選了部分重要的內容：</p><ul><li><strong>異質性</strong> - 通過中間件解決各分散系統間的差異（硬體與軟體，如作業系統、開發語言等）。</li><li><strong>一致性 </strong>- 在資料分散與複製到不同機器上時，保障各主機之間資料與時間一致。</li><li><strong>獨立性</strong> - 保障一個主機的故障與維護不會影響整個系統的運作。</li><li><strong>開放性</strong> - 由於分布式系統一般由多個工程師共同維護、分別開發，因此需要統一並遵循一定的標準，讓各人員能夠相互了解系統的各個區塊。</li><li><strong>安全性</strong> - 由於多主機間增加的傳輸，各元件之間都需要做好加密與防護工作。</li><li><strong>可擴展性</strong> - 為應變多變的業務需求，系統一定要能夠隨時進行擴充。</li></ul><p> </p>
                 </div>
             </section>
 
