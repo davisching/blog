@@ -147,7 +147,7 @@
     <li class="nav-zhu-ye" role="menuitem"><a href="../">主頁</a></li>
     <li class="nav-guan-yu" role="menuitem"><a href="../author/davis/">關於</a></li>
     <li class="nav-jie-jue-hui-zong" role="menuitem"><a href="../tag/problem-solved-yeah/">解決匯總</a></li>
-    <li class="nav-shua-xin-man-nei-di-ban" role="menuitem"><a href="http://davisching.gitee.io">刷新慢？內地版</a></li>
+    <li class="nav-fen-san-shi-xi-tong" role="menuitem"><a href="../tag/distributed-system/">分散式系統</a></li>
 </ul>
 
         <div class="site-nav-right">
@@ -272,13 +272,13 @@ server:
                     </footer>
                 </article>
 
-                <article class="post-card post tag-hello-java-dev ">
+                <article class="post-card post tag-distributed-system tag-hello-java-dev ">
 
     <a class="post-card-image-link" href="../distributed-system-01/">
-        <img class="post-card-image" srcset="../content/images/size/w300/2020/03/Snip20200314_5.png 300w,
-                   ../content/images/size/w600/2020/03/Snip20200314_5.png 600w,
-                  ../content/images/size/w1000/2020/03/Snip20200314_5. png 1000w,
-                 ../content/images/size/w2000/2020/03/Snip20200314_5.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2020/03/Snip20200314_5.png" alt="分散式系統 - 學習筆記 - 壹">
+        <img class="post-card-image" srcset="../content/images/size/w300/2020/03/thumb-1920-96765-1.jpg 300w,
+                   ../content/images/size/w600/2020/03/thumb-1920-96765-1.jpg 600w,
+                  ../content/images/size/w1000/2020/03/thumb-1920-96765-1.jpg 1000w,
+                 ../content/images/size/w2000/2020/03/thumb-1920-96765-1.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2020/03/thumb-1920-96765-1.jpg" alt="分散式系統 - 學習筆記 - 壹">
     </a>
 
     <div class="post-card-content">
@@ -286,7 +286,7 @@ server:
         <a class="post-card-content-link" href="../distributed-system-01/">
 
             <header class="post-card-header">
-                    <span class="post-card-tags">侬好，Java Dev</span>
+                    <span class="post-card-tags">分散式系統</span>
                 <h2 class="post-card-title">分散式系統 - 學習筆記 - 壹</h2>
             </header>
 

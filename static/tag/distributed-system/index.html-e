@@ -4,29 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>侬好，Java Dev - Davis Ching</title>
+    <title>分散式系統 - 學習筆記 ｜ Davis Ching</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=626956e4d7">
 
-    <meta name="description" content="该区块记录了Java开发的各类复习笔记与开发过程纪录，方便自己复习，并提高之后的开发速度。">
+    <meta name="description" content="雖然本人碩士所在學校 - 墨爾本大學 - 在分散式系統的研究上碩果累累，且在世界上佔有一定程度的地位。但他教給我們的也只是一些理論的皮毛、一些較老的工具以及十分簡單的實踐架構。因此在本人軍事訓練放假之餘，決定對分散式系統進行一定程度的複習與擴展學習。">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
     <meta property="og:site_name" content="Davis Ching">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="侬好，Java Dev - Davis Ching">
-    <meta property="og:description" content="该区块记录了Java开发的各类复习笔记与开发过程纪录，方便自己复习，并提高之后的开发速度。">
-    <meta property="og:url" content="http://localhost:2373/tag/hello-java-dev/">
-    <meta property="og:image" content="http://localhost:2373/content/images/2020/01/thumb-1920-657227.jpg">
+    <meta property="og:title" content="分散式系統 - 學習筆記 ｜ Davis Ching">
+    <meta property="og:description" content="雖然本人碩士所在學校 - 墨爾本大學 - 在分散式系統的研究上碩果累累，且在世界上佔有一定程度的地位。但他教給我們的也只是一些理論的皮毛、一些較老的工具以及十分簡單的實踐架構。因此在本人軍事訓練放假之餘，決定對分散式系統進行一定程度的複習與擴展學習。">
+    <meta property="og:url" content="http://localhost:2373/tag/distributed-system/">
+    <meta property="og:image" content="http://localhost:2373/content/images/2020/03/thumb-1920-96765.jpg">
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="侬好，Java Dev - Davis Ching">
-    <meta name="twitter:description" content="该区块记录了Java开发的各类复习笔记与开发过程纪录，方便自己复习，并提高之后的开发速度。">
-    <meta name="twitter:url" content="http://localhost:2373/tag/hello-java-dev/">
-    <meta name="twitter:image" content="http://localhost:2373/content/images/2020/01/thumb-1920-657227.jpg">
+    <meta name="twitter:title" content="分散式系統 - 學習筆記 ｜ Davis Ching">
+    <meta name="twitter:description" content="雖然本人碩士所在學校 - 墨爾本大學 - 在分散式系統的研究上碩果累累，且在世界上佔有一定程度的地位。但他教給我們的也只是一些理論的皮毛、一些較老的工具以及十分簡單的實踐架構。因此在本人軍事訓練放假之餘，決定對分散式系統進行一定程度的複習與擴展學習。">
+    <meta name="twitter:url" content="http://localhost:2373/tag/distributed-system/">
+    <meta name="twitter:image" content="http://localhost:2373/content/images/2020/03/thumb-1920-96765.jpg">
     <meta name="twitter:site" content="@tryghost">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="1080">
@@ -45,19 +45,19 @@
             "height": 48
         }
     },
-    "url": "http://localhost:2373/tag/hello-java-dev/",
+    "url": "http://localhost:2373/tag/distributed-system/",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2373/content/images/2020/01/thumb-1920-657227.jpg",
+        "url": "http://localhost:2373/content/images/2020/03/thumb-1920-96765.jpg",
         "width": 1920,
         "height": 1080
     },
-    "name": "侬好，Java Dev",
+    "name": "分散式系統",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2373/"
     },
-    "description": "该区块记录了Java开发的各类复习笔记与开发过程纪录，方便自己复习，并提高之后的开发速度。"
+    "description": "雖然本人碩士所在學校 - 墨爾本大學 - 在分散式系統的研究上碩果累累，且在世界上佔有一定程度的地位。但他教給我們的也只是一些理論的皮毛、一些較老的工具以及十分簡單的實踐架構。因此在本人軍事訓練放假之餘，決定對分散式系統進行一定程度的複習與擴展學習。"
 }
     </script>
 
@@ -103,7 +103,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/tomorrow-night-eighties.min.css" rel="stylesheet">
 
 </head>
-<body class="tag-template tag-hello-java-dev">
+<body class="tag-template tag-distributed-system">
     <div class="site-wrapper">
         <header class="site-header outer no-image">
     <div class="inner">
@@ -124,7 +124,7 @@
     <li class="nav-zhu-ye" role="menuitem"><a href="../../">主頁</a></li>
     <li class="nav-guan-yu" role="menuitem"><a href="../../author/davis/">關於</a></li>
     <li class="nav-jie-jue-hui-zong" role="menuitem"><a href="../problem-solved-yeah/">解決匯總</a></li>
-    <li class="nav-fen-san-shi-xi-tong" role="menuitem"><a href="../distributed-system/">分散式系統</a></li>
+    <li class="nav-fen-san-shi-xi-tong nav-current" role="menuitem"><a href="index.html">分散式系統</a></li>
 </ul>
 
         <div class="site-nav-right">
@@ -168,9 +168,9 @@
         
 <div class="inner">
     <div class="site-header-content">
-        <h1 class="site-title">侬好，Java Dev</h1>
+        <h1 class="site-title">分散式系統</h1>
         <h2 class="site-description">
-                该区块记录了Java开发的各类复习笔记与开发过程纪录，方便自己复习，并提高之后的开发速度。
+                雖然本人碩士所在學校 - 墨爾本大學 - 在分散式系統的研究上碩果累累，且在世界上佔有一定程度的地位。但他教給我們的也只是一些理論的皮毛、一些較老的工具以及十分簡單的實踐架構。因此在本人軍事訓練放假之餘，決定對分散式系統進行一定程度的複習與擴展學習。
         </h2>
     </div>
 </div>
@@ -218,96 +218,6 @@
             </ul>
 
             <span class="post-date">Saturday March 14 2020</span>
-        </footer>
-
-    </div>
-
-</article>
-                <article class="post-card post tag-hello-java-dev ">
-
-    <a class="post-card-image-link" href="../../spring-boot-profiles/">
-        <img class="post-card-image" srcset="../../content/images/size/w300/2020/02/Snip20200203_3.png 300w,
-                   ../../content/images/size/w600/2020/02/Snip20200203_3.png 600w,
-                  ../../content/images/size/w1000/2020/02/Snip20200203_3. png 1000w,
-                 ../../content/images/size/w2000/2020/02/Snip20200203_3. png 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/02/Snip20200203_3.png" alt="Spring Boot 多環境佈署 profile">
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="../../spring-boot-profiles/">
-
-            <header class="post-card-header">
-                    <span class="post-card-tags">侬好，Java Dev</span>
-                <h2 class="post-card-title">Spring Boot 多環境佈署 profile</h2>
-            </header>
-
-            <section class="post-card-excerpt">
-                <p>在 Spring Boot 開發時，一般都會分為開發(dev)、測試(test)與生產(prod)環境。通過一份 profile 就可以對各個環境下的配置進行統一的管理。</p>
-            </section>
-
-        </a>
-
-        <footer class="post-card-meta">
-
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        Davis · 景詩維 
-                    </div>
-
-                        <a href="../../author/davis/" class="static-avatar">
-                            <img class="author-profile-image" src="../../content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
-                        </a>
-                </li>
-            </ul>
-
-            <span class="post-date">Monday February 03 2020</span>
-        </footer>
-
-    </div>
-
-</article>
-                <article class="post-card post tag-hello-java-dev ">
-
-    <a class="post-card-image-link" href="../../devops-online-store/">
-        <img class="post-card-image" srcset="../../content/images/size/w300/2020/01/thumb-1920-430946.jpg 300w,
-                   ../../content/images/size/w600/2020/01/thumb-1920-430946.jpg 600w,
-                  ../../content/images/size/w1000/2020/01/thumb-1920-430946.jpg 1000w,
-                 ../../content/images/size/w2000/2020/01/thumb-1920-430946.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/01/thumb-1920-430946.jpg" alt="【过程记录】云服务器部署 - 单体架构电商网站">
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="../../devops-online-store/">
-
-            <header class="post-card-header">
-                    <span class="post-card-tags">侬好，Java Dev</span>
-                <h2 class="post-card-title">【过程记录】云服务器部署 - 单体架构电商网站</h2>
-            </header>
-
-            <section class="post-card-excerpt">
-                <p>本篇将纪录在云服务器上部署一个单体架构电商网站的过程。（操作系统：CentOS）</p>
-            </section>
-
-        </a>
-
-        <footer class="post-card-meta">
-
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        Davis · 景詩維 
-                    </div>
-
-                        <a href="../../author/davis/" class="static-avatar">
-                            <img class="author-profile-image" src="../../content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
-                        </a>
-                </li>
-            </ul>
-
-            <span class="post-date">Monday January 20 2020</span>
         </footer>
 
     </div>
