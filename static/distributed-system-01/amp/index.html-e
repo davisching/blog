@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>[解决] MySQL数据库时区问题</title>
+    <title>分散式系統 - 學習筆記 - 壹</title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -13,27 +13,27 @@
     
     <meta property="og:site_name" content="Davis Ching">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="[解决] MySQL数据库时区问题">
-    <meta property="og:description" content="在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。">
-    <meta property="og:url" content="http://localhost:2373/solve-mysql-time-zone/">
-    <meta property="og:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg">
-    <meta property="article:published_time" content="2018-12-23T08:41:00.000Z">
-    <meta property="article:modified_time" content="2020-01-31T11:57:33.000Z">
-    <meta property="article:tag" content="吃我一套「解决拳」！">
+    <meta property="og:title" content="分散式系統 - 學習筆記 - 壹">
+    <meta property="og:description" content="本章開始對分散式系統進行再一次的學習，該篇是對分散式系統相關內容的學習筆記，將會紀錄一些基本知識。">
+    <meta property="og:url" content="http://localhost:2373/distributed-system-01/">
+    <meta property="og:image" content="http://localhost:2373/content/images/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg">
+    <meta property="article:published_time" content="2020-03-14T08:22:28.000Z">
+    <meta property="article:modified_time" content="2020-03-14T08:33:25.000Z">
+    <meta property="article:tag" content="侬好，Java Dev">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="[解决] MySQL数据库时区问题">
-    <meta name="twitter:description" content="在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。">
-    <meta name="twitter:url" content="http://localhost:2373/solve-mysql-time-zone/">
-    <meta name="twitter:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg">
+    <meta name="twitter:title" content="分散式系統 - 學習筆記 - 壹">
+    <meta name="twitter:description" content="本章開始對分散式系統進行再一次的學習，該篇是對分散式系統相關內容的學習筆記，將會紀錄一些基本知識。">
+    <meta name="twitter:url" content="http://localhost:2373/distributed-system-01/">
+    <meta name="twitter:image" content="http://localhost:2373/content/images/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Davis · 景詩維 ">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="吃我一套「解决拳」！">
+    <meta name="twitter:data2" content="侬好，Java Dev">
     <meta name="twitter:site" content="@tryghost">
-    <meta property="og:image:width" content="1920">
-    <meta property="og:image:height" content="1080">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
     
     <script type="application/ld+json">
 {
@@ -61,18 +61,18 @@
         "url": "http://localhost:2373/author/davis/",
         "sameAs": []
     },
-    "headline": "[解决] MySQL数据库时区问题",
-    "url": "http://localhost:2373/solve-mysql-time-zone/",
-    "datePublished": "2018-12-23T08:41:00.000Z",
-    "dateModified": "2020-01-31T11:57:33.000Z",
+    "headline": "分散式系統 - 學習筆記 - 壹",
+    "url": "http://localhost:2373/distributed-system-01/",
+    "datePublished": "2020-03-14T08:22:28.000Z",
+    "dateModified": "2020-03-14T08:33:25.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg",
-        "width": 1920,
-        "height": 1080
+        "url": "http://localhost:2373/content/images/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg",
+        "width": 1280,
+        "height": 720
     },
-    "keywords": "吃我一套「解决拳」！",
-    "description": "在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。",
+    "keywords": "侬好，Java Dev",
+    "description": "本章開始對分散式系統進行再一次的學習，該篇是對分散式系統相關內容的學習筆記，將會紀錄一些基本知識。",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2373/"
@@ -104,24 +104,18 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">[解决] MySQL数据库时区问题</h1>
+                <h1 class="post-title">分散式系統 - 學習筆記 - 壹</h1>
                 <section class="post-meta">
                     <p class="author">by <a href="../../author/davis/">Davis · 景詩維 </a></p>
-                    <time class="post-date" datetime="2018-12-23">2018-12-23</time>
+                    <time class="post-date" datetime="2020-03-14">2020-03-14</time>
                 </section>
             </header>
             <figure class="post-image">
-                <amp-img src="http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg" width="600" height="400" layout="responsive"></amp-img>
+                <amp-img src="http://localhost:2373/content/images/2020/03/1-tYxWuyksovxA1Thu8PggPQ.jpeg" width="600" height="400" layout="responsive"></amp-img>
             </figure>
             <section class="post-content">
 
-                <blockquote>
-<p>在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。</p>
-</blockquote>
-<pre><code class="language-xml">url: jdbc:mysql://localhost:3306/ols?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;serverTimezone=GMT%2B8
-</code></pre>
-<p>添加 ：<code>serverTimezone=GMT%2B8</code></p>
-
+                <blockquote>雖然本人碩士所在學校 - 墨爾本大學 - 在分散式系統的研究上碩果累累，且在世界上佔有一定程度的地位。但他教給我們的也只是一些理論的皮毛、一些較老的工具以及十分簡單的實踐架構。因此在本人軍事訓練放假之餘，決定對分散式系統進行一定程度的複習與擴展學習。本章將開始這一系列的學習紀錄，並收錄一些分散式系統的基礎知識。</blockquote><h2 id="01-">01. 什麼是分散式系統，它的優點是什麼？</h2><p></p><p>用我自己的話來概括就是：「<strong>由多硬體組成的單一軟體。</strong>」至於它的優點，因為它分散的各個節點互相獨立，因此<strong>擁有更優的可擴展性</strong>（即更易擴充與升級）<strong>、可用性與安全性等</strong>。</p><p>詳細的來說：集中式系統，有別於分散式系統，雖然更易維護與開發，但是一旦系統出現問題，就會造成這個軟體的故障。比如伺服器的故障或是一個重要功能的更新，都會造成網站或應用的暫時停擺，直到新的更新或伺服器的重啓。因此，集中式系統對於單個伺服器硬體的要求也非常高。而分散式系統正好能夠擺脫這些困擾。</p>
 
             </section>
 

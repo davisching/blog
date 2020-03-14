@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=e7b09ea9be">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=626956e4d7">
 
     <meta name="description" content="【吃我一套「解决拳」！】系列是本人于学习与开发碰到问题后，解决方案的汇总。另，这个系列文章都会改变其上传时间，已避免被推送到最前面。">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
@@ -114,10 +114,10 @@
         <div class="site-nav-left">
         </div>
             <ul class="nav" role="menu">
-    <li class="nav-bo-ke-shou-ye" role="menuitem"><a href="../../">博客首页</a></li>
-    <li class="nav-ge-ren-zi-liao" role="menuitem"><a href="../../author/davis/">个人资料</a></li>
-    <li class="nav-jie-jue-hui-zong nav-current" role="menuitem"><a href="index.html">解决汇总</a></li>
-    <li class="nav-shua-xin-man-guo-nei-ban" role="menuitem"><a href="http://davisching.gitee.io">刷新慢？国内版</a></li>
+    <li class="nav-zhu-ye" role="menuitem"><a href="../../">主頁</a></li>
+    <li class="nav-guan-yu" role="menuitem"><a href="../../author/davis/">關於</a></li>
+    <li class="nav-jie-jue-hui-zong nav-current" role="menuitem"><a href="index.html">解決匯總</a></li>
+    <li class="nav-shua-xin-man-nei-di-ban" role="menuitem"><a href="http://davisching.gitee.io">刷新慢？內地版</a></li>
 </ul>
 
         <div class="site-nav-right">
@@ -338,9 +338,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=e7b09ea9be"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=626956e4d7"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=e7b09ea9be"></script>
+    <script src="../../assets/built/infinitescroll.js?v=626956e4d7"></script>
 
     
 

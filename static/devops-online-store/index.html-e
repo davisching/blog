@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=e7b09ea9be">
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=626956e4d7">
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="canonical" href="index.html">
@@ -144,10 +144,10 @@
         <div class="site-nav-left">
         </div>
             <ul class="nav" role="menu">
-    <li class="nav-bo-ke-shou-ye" role="menuitem"><a href="../">博客首页</a></li>
-    <li class="nav-ge-ren-zi-liao" role="menuitem"><a href="../author/davis/">个人资料</a></li>
-    <li class="nav-jie-jue-hui-zong" role="menuitem"><a href="../tag/problem-solved-yeah/">解决汇总</a></li>
-    <li class="nav-shua-xin-man-guo-nei-ban" role="menuitem"><a href="http://davisching.gitee.io">刷新慢？国内版</a></li>
+    <li class="nav-zhu-ye" role="menuitem"><a href="../">主頁</a></li>
+    <li class="nav-guan-yu" role="menuitem"><a href="../author/davis/">關於</a></li>
+    <li class="nav-jie-jue-hui-zong" role="menuitem"><a href="../tag/problem-solved-yeah/">解決匯總</a></li>
+    <li class="nav-shua-xin-man-nei-di-ban" role="menuitem"><a href="http://davisching.gitee.io">刷新慢？內地版</a></li>
 </ul>
 
         <div class="site-nav-right">
@@ -295,7 +295,69 @@ flush privileges;</code></pre>
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
+                <article class="read-next-card" style="background-image: url(../content/images/size/w600/2020/01/thumb-1920-657227.jpg)">
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">— Davis Ching —</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/hello-java-dev/">侬好，Java Dev</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../distributed-system-01/">分散式系統 - 學習筆記 - 壹</a></li>
+                            <li><a href="../spring-boot-profiles/">Spring Boot 多環境佈署 profile</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/hello-java-dev/">See all 2 posts →</a>
+                    </footer>
+                </article>
 
+                <article class="post-card post tag-hello-java-dev ">
+
+    <a class="post-card-image-link" href="../spring-boot-profiles/">
+        <img class="post-card-image" srcset="../content/images/size/w300/2020/02/Snip20200203_3.png 300w,
+                   ../content/images/size/w600/2020/02/Snip20200203_3.png 600w,
+                  ../content/images/size/w1000/2020/02/Snip20200203_3. png 1000w,
+                 ../content/images/size/w2000/2020/02/Snip20200203_3.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2020/02/Snip20200203_3.png" alt="Spring Boot 多環境佈署 profile">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../spring-boot-profiles/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">侬好，Java Dev</span>
+                <h2 class="post-card-title">Spring Boot 多環境佈署 profile</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>在 Spring Boot 開發時，一般都會分為開發(dev)、測試(test)與生產(prod)環境。通過一份 profile 就可以對各個環境下的配置進行統一的管理。</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Davis · 景詩維 
+                    </div>
+
+                        <a href="../author/davis/" class="static-avatar">
+                            <img class="author-profile-image" src="../content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
+                        </a>
+                </li>
+            </ul>
+
+            <span class="post-date">Monday February 03 2020</span>
+        </footer>
+
+    </div>
+
+</article>
 
                 <article class="post-card post tag-problem-solved-yeah ">
 
@@ -404,7 +466,7 @@ flush privileges;</code></pre>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=e7b09ea9be"></script>
+    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=626956e4d7"></script>
 
 
     <script>
