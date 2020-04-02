@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=626956e4d7">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=6502ecce7b">
 
     <meta name="description" content="该区块记录了Java开发的各类复习笔记与开发过程纪录，方便自己复习，并提高之后的开发速度。">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
@@ -178,6 +178,51 @@
 <main id="site-main" class="site-main outer">
     <div class="inner">
         <div class="post-feed">
+                <article class="post-card post tag-hello-java-dev ">
+
+    <a class="post-card-image-link" href="../../online-store-on-google/">
+        <img class="post-card-image" srcset="../../content/images/size/w300/2020/04/Snip20200328_1.png 300w,
+                   ../../content/images/size/w600/2020/04/Snip20200328_1.png 600w,
+                  ../../content/images/size/w1000/2020/04/Snip20200328_1. png 1000w,
+                 ../../content/images/size/w2000/2020/04/Snip20200328_1.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/04/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../online-store-on-google/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">侬好，Java Dev</span>
+                <h2 class="post-card-title">通過 Google Cloud 架設電商系統</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄： 題外話：在 Google Cloud上選擇最低配置的系統，居然可以免費架設？在創建完一個作業系統為 CentOS 7.0 的實例後，就可以通過網頁端的 ssh 方法直接登陸操作這個伺服器了。但個人習慣採用</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Davis · 景詩維 
+                    </div>
+
+                        <a href="../../author/davis/" class="static-avatar">
+                            <img class="author-profile-image" src="../../content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
+                        </a>
+                </li>
+            </ul>
+
+            <span class="post-date">Thursday April 02 2020</span>
+        </footer>
+
+    </div>
+
+</article>
                 <article class="post-card post tag-distributed-system tag-hello-java-dev ">
 
     <a class="post-card-image-link" href="../../distributed-system-01/">
@@ -345,9 +390,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=626956e4d7"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=6502ecce7b"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=626956e4d7"></script>
+    <script src="../../assets/built/infinitescroll.js?v=6502ecce7b"></script>
 
     
 

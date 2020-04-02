@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=626956e4d7">
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=6502ecce7b">
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="canonical" href="index.html">
@@ -263,12 +263,13 @@ server:
 </div>
                     <div class="read-next-card-content">
                         <ul>
+                            <li><a href="../online-store-on-google/">通過 Google Cloud 架設電商系統</a></li>
                             <li><a href="../distributed-system-01/">分散式系統 - 學習筆記 - 壹</a></li>
                             <li><a href="../devops-online-store/">【过程记录】云服务器部署 - 单体架构电商网站</a></li>
                         </ul>
                     </div>
                     <footer class="read-next-card-footer">
-                        <a href="../tag/hello-java-dev/">See all 2 posts →</a>
+                        <a href="../tag/hello-java-dev/">See all 3 posts →</a>
                     </footer>
                 </article>
 
@@ -425,7 +426,7 @@ server:
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=626956e4d7"></script>
+    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=6502ecce7b"></script>
 
 
     <script>
