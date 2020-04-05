@@ -18,7 +18,7 @@
     <meta property="og:url" content="http://localhost:2373/online-store-on-google/">
     <meta property="og:image" content="http://localhost:2373/content/images/2020/04/Snip20200328_1.png">
     <meta property="article:published_time" content="2020-04-02T07:47:21.000Z">
-    <meta property="article:modified_time" content="2020-04-05T03:03:16.000Z">
+    <meta property="article:modified_time" content="2020-04-05T07:20:16.000Z">
     <meta property="article:tag" content="侬好，Java Dev">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
@@ -64,7 +64,7 @@
     "headline": "通過 Google Cloud 架設電商系統",
     "url": "http://localhost:2373/online-store-on-google/",
     "datePublished": "2020-04-02T07:47:21.000Z",
-    "dateModified": "2020-04-05T03:03:16.000Z",
+    "dateModified": "2020-04-05T07:20:16.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:2373/content/images/2020/04/Snip20200328_1.png",
@@ -128,7 +128,14 @@ mv tomcat-frontend/ /usr/local/</code></pre><p>然后进入Tomcat的 bin文件�
                connectionTimeout="20000"
                redirectPort="8443" /&gt;</code></pre><p>2. 找到服务器关闭端口 8005，并修改他为其他数字，如8015。</p><pre><code class="language-xml">&lt;Server port="8015" shutdown="SHUTDOWN"&gt;</code></pre><p>3. 修改 AJP Connector 的端口 8009, 为8019。</p><pre><code class="language-xml">&lt;Connector port="8019" protocol="AJP/1.3" redirectPort="8443" /&gt;
 </code></pre><h2 id="--2">状况处理</h2><p>注意：访问的时候会碰到一些问题，可以通过以下方法查看端口的状况：</p><pre><code class="language-cmd">netstat -an | grep 8080</code></pre><p>第一次访问端口时，会奇慢无比，可以通过以下两行代码改进：</p><pre><code class="language-cmd">yum install -y rng-tools
-systemctl start rngd</code></pre><p>以上两行代码的功效就是安装一个工具，去处理阿里云服务器中的某个速度奇慢的运算过程，具体详情请参考 <a href="https://blog.csdn.net/u013361107/article/details/80826092">https://blog.csdn.net/u013361107/article/details/80826092</a>。</p><h1 id="-mariadb">安装 MariaDB</h1><p>MariaDB 提供了自动安装，但听闻其国内访问速度奇慢，那么国内的云服务器肯定不能采用自动安装了。以下是手动安装的步骤：</p><p>1. 下载 MariaDB 各安装包</p><p>进入官网，并使用其 <a href="https://downloads.mariadb.org/mariadb/repositories/">Repository Configuration Tool</a>. 选择好操作系统和使用版本，如 CentOS ▶ CentOS 7 (x86_64) ▶ 10.4 [Stable] ▶ (下方链接) baseurl = <a href="http://yum.mariadb.org/10.4/centos7-amd64">http://yum.mariadb.org/10.4/centos7-amd64</a>  ▶ rpms/ ▶ 然后下载以下安装包，并上传至服务器：</p><ul><li>jemalloc-3.6.0-1.el7.x86_64.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-client.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-compat.rpm</li><li>galera-25.3.19-1.rhel7.el7.centos.x86_64.rpm</li><li>jemalloc-devel-3.6.0-1.el7.x86_64.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-common.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-server.rpm</li></ul><p>（版本号按需改变，如有疑问，请参考：<a href="https://mariadb.com/kb/en/mariadb-installation-version-10121-via-rpms-on-centos-7/">https://mariadb.com/kb/en/mariadb-installation-version-10121-via-rpms-on-centos-7/</a>）</p><p>2. 安装 MairaDB 所需依赖 (版本号自行调整)</p><pre><code class="language-cmd">yum install rsync nmap lsof perl-DBI nc
+systemctl start rngd</code></pre><p>以上两行代码的功效就是安装一个工具，去处理阿里云服务器中的某个速度奇慢的运算过程，具体详情请参考 <a href="https://blog.csdn.net/u013361107/article/details/80826092">https://blog.csdn.net/u013361107/article/details/80826092</a>。</p><h1 id="-mariadb">安装 MariaDB</h1><p>MariaDB 提供了自动安装，以下是官網上自動安裝的方法：</p><p>Here is your custom MariaDB YUM repository entry for CentOS. Copy and  paste it into a file under /etc/yum.repos.d/ (we suggest naming the  file MariaDB.repo or something similar).</p><pre><code class="language-cmd"># MariaDB 10.4 CentOS repository list - created 2020-04-05 06:36 UTC
+# http://downloads.mariadb.org/mariadb/repositories/
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.4/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1</code></pre><p>After the file is in place, install MariaDB with:</p><pre><code class="language-cmd">sudo yum install MariaDB-server MariaDB-client</code></pre><p>這裏按照官方的步驟，一定會出錯。需要自行 google 查找解決方法。這裏可以選擇的方法有：</p><pre><code class="language-cmd">yum install mariadb*
+chown -R mysql:mysql /var/lib/mysql/</code></pre><blockquote>可採用  yum remove mariadb 卸載，具體深度卸載可參考 <a href="https://blog.csdn.net/chengyuqiang/article/details/80210416">https://blog.csdn.net/chengyuqiang/article/details/80210416</a></blockquote><p>之後就參考下文中的【3】配置数据库 與 【4】开启远程连接 繼續操作即可。</p><figure class="kg-card kg-image-card kg-card-hascaption"><figcaption>看到 MariaDB 出現就安裝成功了</figcaption></figure><h2 id="--3">手動安裝</h2><p>如果自動安裝有問題的話，以下是手动安装的步骤：</p><p>1. 下载 MariaDB 各安装包</p><p>进入官网，并使用其 <a href="https://downloads.mariadb.org/mariadb/repositories/">Repository Configuration Tool</a>. 选择好操作系统和使用版本，如 CentOS ▶ CentOS 7 (x86_64) ▶ 10.4 [Stable] ▶ (下方链接) baseurl = <a href="http://yum.mariadb.org/10.4/centos7-amd64">http://yum.mariadb.org/10.4/centos7-amd64</a>  ▶ rpms/ ▶ 然后下载以下安装包，并上传至服务器：</p><ul><li>jemalloc-3.6.0-1.el7.x86_64.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-client.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-compat.rpm</li><li>galera-25.3.19-1.rhel7.el7.centos.x86_64.rpm</li><li>jemalloc-devel-3.6.0-1.el7.x86_64.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-common.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-server.rpm</li></ul><p>（版本号按需改变，如有疑问，请参考：<a href="https://mariadb.com/kb/en/mariadb-installation-version-10121-via-rpms-on-centos-7/">https://mariadb.com/kb/en/mariadb-installation-version-10121-via-rpms-on-centos-7/</a>）</p><p>2. 安装 MairaDB 所需依赖 (版本号自行调整)</p><pre><code class="language-cmd">yum install rsync nmap lsof perl-DBI nc
 rpm -ivh jemalloc-3.6.0-1.el7.x86_64.rpm
 rpm -ivh jemalloc-devel-3.6.0-1.el7.x86_64.rpm
 
