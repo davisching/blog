@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=6502ecce7b">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=bba9bb2278">
 
     <meta name="description" content="该区块记录了Java开发的各类复习笔记与开发过程纪录，方便自己复习，并提高之后的开发速度。">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
@@ -197,7 +197,7 @@
             </header>
 
             <section class="post-card-excerpt">
-                <p>之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄： 題外話：在 Google Cloud上選擇最低配置的系統，居然可以免費架設？在創建完一個作業系統為 CentOS 7.0 的實例後，就可以通過網頁端的 ssh 方法直接登陸操作這個伺服器了。但個人習慣採用</p>
+                <p>之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄： 題外話：在 Google Cloud上選擇最低配置的系統，居然可以免費架設？另，本項目最終的 ip 地址是 34.80.79.144，下文中其他的</p>
             </section>
 
         </a>
@@ -390,9 +390,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=6502ecce7b"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=bba9bb2278"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=6502ecce7b"></script>
+    <script src="../../assets/built/infinitescroll.js?v=bba9bb2278"></script>
 
     
 
