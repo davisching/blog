@@ -1,4 +1,144 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Davis Ching</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2373/</link><image><url>http://localhost:2373/favicon.png</url><title>Davis Ching</title><link>http://localhost:2373/</link></image><generator>Ghost 3.1</generator><lastBuildDate>Sun, 05 Apr 2020 08:44:31 GMT</lastBuildDate><atom:link href="http://localhost:2373/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>通過 Google Cloud 架設電商系統</title><description>之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄</description><link>http://localhost:2373/online-store-on-google/</link><guid isPermaLink="false">5e8596e66946432460d37edf</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Thu, 02 Apr 2020 07:47:21 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" medium="image"/><content:encoded>&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統"&gt;&lt;p&gt;之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄：&lt;/p&gt;&lt;blockquote&gt;題外話：在 Google Cloud上選擇最低配置的系統，居然可以免費架設？另，本項目最終的 ip 地址是 34.80.79.144，下文中其他的 ip 地址是其他項目或架設於其他服務商的 ip 地址。&lt;/blockquote&gt;&lt;p&gt;在創建完一個作業系統為 CentOS 7.0 的實例後，就可以通過網頁端的 ssh 方法直接登陸操作這個伺服器了。但個人習慣採用 Mac 的 Terminal 來進行伺服器管理，因為這樣在複製和文件傳輸上比較方便。因此，接下來將介紹如何通過 ssh 命令登陸伺服器：&lt;/p&gt;&lt;h2 id="-ssh-"&gt;通過 ssh 命令登陸伺服器&lt;/h2&gt;&lt;p&gt;Google 官方在文檔中介紹的方法，是通過設定公私鑰，匹配登陸系統，但是 Google 沒有提供實例級 ssh 密鑰設定，因此直接修改伺服器系統的配置文件比較快。&lt;/p&gt;&lt;ol&gt;&lt;li&gt;首先通過瀏覽器端登陸伺服器，並切換至 root 帳戶&lt;/li&gt;&lt;/ol&gt;&lt;figure class="kg-card kg-image-card"&gt;&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200402_1.png" class="kg-image" alt="通過 Google Cloud 架設電商系統"&gt;&lt;/figure&gt;&lt;p&gt;之後輸入以下命令：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;sudo -i&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2. 設置 root 密碼&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;passwd root&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3. 打開 sshd_config 配置文件&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;vi /etc/ssh/sshd_config&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;4. 修改配置內容&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;PermitRootLogin yes           
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Davis Ching</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2373/</link><image><url>http://localhost:2373/favicon.png</url><title>Davis Ching</title><link>http://localhost:2373/</link></image><generator>Ghost 3.1</generator><lastBuildDate>Sat, 25 Apr 2020 09:40:10 GMT</lastBuildDate><atom:link href="http://localhost:2373/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</title><description>使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。</description><link>http://localhost:2373/review-hrm/</link><guid isPermaLink="false">5ea3fc552410164c084c86ff</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Sat, 25 Apr 2020 09:05:40 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" medium="image"/><content:encoded>&lt;!--kg-card-begin: markdown--&gt;&lt;blockquote&gt;
+&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" alt="退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統"&gt;&lt;p&gt;四個月的役期到現在剩下七週時間，長時間在兵營裡，也逐漸遺忘了一些技術，因此在最後的這段時間，利用每週短暫放假的一天半，對一些技術進行複習。這裏將會使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="springsecurity"&gt;壹 ｜Spring Security 安全架構&lt;/h2&gt;
+&lt;p&gt;Spring Security 是一種針對企業系統訪問時的安全問題，進行安全管理的一種架構，主要可以控制如：密碼加密、表單安全管理、驗證、命名空間安全管理等操作。該項目將只會採用一些最基本的功能，對該項目進行一些安全保護。&lt;/p&gt;
+&lt;p&gt;這個框架之所以能夠進行安全管理，主要是因為它大量的依賴了 Servlet 的過濾器 (Filter) 功能。也就是開發者封裝了大量針對安全管理的過濾器，方便我們對自己的項目安全管理方面能夠更快的完成處置。其中，安全管理主要包含以下兩個操作：認證與授權。&lt;/p&gt;
+&lt;h3 id&gt;資料庫準備&lt;/h3&gt;
+&lt;p&gt;首先登陸資料庫，並創建新的資料庫與表單：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-sql"&gt;create database hrm;
+use hrm;
+drop table if exists `user`;
+create table `user` (
+	id bigint(20) not null auto_increment primary key,
+  username varchar(32) comment '帳號',
+  password varchar(16) comment '密碼',
+  nickname varchar(32) default '' comment '暱稱'
+) engine=innodb default charset=utf8mb4;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;檢查表是否成功創建：&lt;/p&gt;
+&lt;!--kg-card-end: markdown--&gt;&lt;figure class="kg-card kg-image-card"&gt;&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200425_1.png" class="kg-image" alt="退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統"&gt;&lt;/figure&gt;&lt;!--kg-card-begin: markdown--&gt;&lt;h3 id="springsecurity"&gt;Spring Security 小練習&lt;/h3&gt;
+&lt;p&gt;在此之前，先創建一個小項目，練習一下 Spring Security 的基本操作。首先，創建一個新的 maven 項目，採用 &lt;code&gt;maven-archetype-quickstart&lt;/code&gt; 並命名為 &lt;code&gt;SpringSecurityPractice&lt;/code&gt; 並修改其依賴 &lt;code&gt;pom.xml&lt;/code&gt;為以下內容：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-xml"&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+
+&amp;lt;project xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+  xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+  &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+  &amp;lt;groupId&amp;gt;pers.dc&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;SpringSecurityPractice&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt;
+
+  &amp;lt;name&amp;gt;SpringSecurityPractice&amp;lt;/name&amp;gt;
+  &amp;lt;!-- FIXME change it to the project's website --&amp;gt;
+  &amp;lt;url&amp;gt;http://www.example.com&amp;lt;/url&amp;gt;
+
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;2.2.6.RELEASE&amp;lt;/version&amp;gt;
+    &amp;lt;/parent&amp;gt;
+
+  &amp;lt;properties&amp;gt;
+    &amp;lt;project.build.sourceEncoding&amp;gt;UTF-8&amp;lt;/project.build.sourceEncoding&amp;gt;
+    &amp;lt;maven.compiler.source&amp;gt;1.7&amp;lt;/maven.compiler.source&amp;gt;
+    &amp;lt;maven.compiler.target&amp;gt;1.7&amp;lt;/maven.compiler.target&amp;gt;
+  &amp;lt;/properties&amp;gt;
+
+  &amp;lt;dependencies&amp;gt;
+      &amp;lt;dependency&amp;gt;
+          &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+          &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
+      &amp;lt;/dependency&amp;gt;
+      &amp;lt;dependency&amp;gt;
+          &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+          &amp;lt;artifactId&amp;gt;spring-boot-starter-thymeleaf&amp;lt;/artifactId&amp;gt;
+      &amp;lt;/dependency&amp;gt;
+      &amp;lt;dependency&amp;gt;
+          &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+          &amp;lt;artifactId&amp;gt;spring-boot-starter-security&amp;lt;/artifactId&amp;gt;
+      &amp;lt;/dependency&amp;gt;
+      &amp;lt;dependency&amp;gt;
+          &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+          &amp;lt;artifactId&amp;gt;spring-boot-starter-data-jpa&amp;lt;/artifactId&amp;gt;
+      &amp;lt;/dependency&amp;gt;
+      &amp;lt;dependency&amp;gt;
+          &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt;
+          &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;1.18.12&amp;lt;/version&amp;gt;
+      &amp;lt;/dependency&amp;gt;
+      &amp;lt;dependency&amp;gt;
+          &amp;lt;groupId&amp;gt;org.mariadb.jdbc&amp;lt;/groupId&amp;gt;
+          &amp;lt;artifactId&amp;gt;mariadb-java-client&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;2.6.0&amp;lt;/version&amp;gt;
+      &amp;lt;/dependency&amp;gt;
+      &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;junit&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;junit&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.11&amp;lt;/version&amp;gt;
+      &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+  &amp;lt;/dependencies&amp;gt;
+
+  &amp;lt;build&amp;gt;
+    &amp;lt;pluginManagement&amp;gt;&amp;lt;!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) --&amp;gt;
+      &amp;lt;plugins&amp;gt;
+          &amp;lt;plugin&amp;gt;
+              &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+              &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+              &amp;lt;executions&amp;gt;
+                  &amp;lt;execution&amp;gt;
+                      &amp;lt;goals&amp;gt;
+                          &amp;lt;goal&amp;gt;repackage&amp;lt;/goal&amp;gt;
+                      &amp;lt;/goals&amp;gt;
+                  &amp;lt;/execution&amp;gt;
+              &amp;lt;/executions&amp;gt;
+          &amp;lt;/plugin&amp;gt;
+        &amp;lt;!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle --&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-clean-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+        &amp;lt;!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging --&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-resources-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;3.0.2&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;3.8.0&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-surefire-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;2.22.1&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-jar-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;3.0.2&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-install-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;2.5.2&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-deploy-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;2.8.2&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+        &amp;lt;!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle --&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-site-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;3.7.1&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+        &amp;lt;plugin&amp;gt;
+          &amp;lt;artifactId&amp;gt;maven-project-info-reports-plugin&amp;lt;/artifactId&amp;gt;
+          &amp;lt;version&amp;gt;3.0.0&amp;lt;/version&amp;gt;
+        &amp;lt;/plugin&amp;gt;
+      &amp;lt;/plugins&amp;gt;
+    &amp;lt;/pluginManagement&amp;gt;
+  &amp;lt;/build&amp;gt;
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!--kg-card-end: markdown--&gt;</content:encoded></item><item><title>通過 Google Cloud 架設電商系統</title><description>之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄</description><link>http://localhost:2373/online-store-on-google/</link><guid isPermaLink="false">5e8596e66946432460d37edf</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Thu, 02 Apr 2020 07:47:21 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" medium="image"/><content:encoded>&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統"&gt;&lt;p&gt;之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄：&lt;/p&gt;&lt;blockquote&gt;題外話：在 Google Cloud上選擇最低配置的系統，居然可以免費架設？另，本項目最終的 ip 地址是 34.80.79.144，下文中其他的 ip 地址是其他項目或架設於其他服務商的 ip 地址。&lt;/blockquote&gt;&lt;p&gt;在創建完一個作業系統為 CentOS 7.0 的實例後，就可以通過網頁端的 ssh 方法直接登陸操作這個伺服器了。但個人習慣採用 Mac 的 Terminal 來進行伺服器管理，因為這樣在複製和文件傳輸上比較方便。因此，接下來將介紹如何通過 ssh 命令登陸伺服器：&lt;/p&gt;&lt;h2 id="-ssh-"&gt;通過 ssh 命令登陸伺服器&lt;/h2&gt;&lt;p&gt;Google 官方在文檔中介紹的方法，是通過設定公私鑰，匹配登陸系統，但是 Google 沒有提供實例級 ssh 密鑰設定，因此直接修改伺服器系統的配置文件比較快。&lt;/p&gt;&lt;ol&gt;&lt;li&gt;首先通過瀏覽器端登陸伺服器，並切換至 root 帳戶&lt;/li&gt;&lt;/ol&gt;&lt;figure class="kg-card kg-image-card"&gt;&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200402_1.png" class="kg-image" alt="通過 Google Cloud 架設電商系統"&gt;&lt;/figure&gt;&lt;p&gt;之後輸入以下命令：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;sudo -i&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2. 設置 root 密碼&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;passwd root&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3. 打開 sshd_config 配置文件&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;vi /etc/ssh/sshd_config&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;4. 修改配置內容&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;PermitRootLogin yes           
 PasswordAuthentication yes&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;5. 重啓伺服器&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;reboot&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在此之後就可以通過 ssh 命令登陸伺服器的 root 用戶了。&lt;/p&gt;&lt;h2 id="-"&gt;環境配置&lt;/h2&gt;&lt;p&gt;通过 ssh 登录服务器之后，首先要创建一个新的账号：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;useradd davis
 passwd davis&lt;/code&gt;&lt;/pre&gt;&lt;h1 id="-jdk"&gt;安装 JDK&lt;/h1&gt;&lt;p&gt;然后需要检查是否有安装 jdk：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;java -version&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如需卸载重装的话：&lt;/p&gt;&lt;pre&gt;&lt;code&gt; rpm -qa|grep openjdk -i
  rpm -e --nodeps 需要删除的软件&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="--1"&gt;开始安装&lt;/h2&gt;&lt;p&gt;1. 新建安装目录&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;mkdir /usr/java&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2. 上传安装包至目录并解压安装&lt;/p&gt;&lt;p&gt;到官网下载最新的 jdk ，然后上传至服务器，这里可以使用 ftp 工具，如 FileZilla。或直接使用以下 scp 命令, 如：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;scp /Users/jasmine/Downloads/jdk-13.0.2_linux-x64_bin.tar.gz root@106.15.194.214:/home/admin/downloads&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;解压 jdk 压缩包：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;tar -zxvf jdk-13.0.2_linux-x64_bin.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;而后移至 jdk 安装位置：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;mv jdk-13.0.2/ /usr/java/&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3. 配置环境变量&lt;/p&gt;&lt;p&gt;编辑 profile 文件：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;vim /etc/profile&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在 profile 文件的末尾添加：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;export JAVA_HOME=/usr/java/jdk-13.0.2
