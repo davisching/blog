@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Davis Ching</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2373/</link><image><url>http://localhost:2373/favicon.png</url><title>Davis Ching</title><link>http://localhost:2373/</link></image><generator>Ghost 3.1</generator><lastBuildDate>Sun, 26 Apr 2020 05:33:31 GMT</lastBuildDate><atom:link href="http://localhost:2373/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</title><description>使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。</description><link>http://localhost:2373/review-hrm/</link><guid isPermaLink="false">5ea3fc552410164c084c86ff</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Sat, 25 Apr 2020 09:05:40 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" medium="image"/><content:encoded>&lt;!--kg-card-begin: markdown--&gt;&lt;blockquote&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Davis Ching</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2373/</link><image><url>http://localhost:2373/favicon.png</url><title>Davis Ching</title><link>http://localhost:2373/</link></image><generator>Ghost 3.1</generator><lastBuildDate>Sun, 26 Apr 2020 05:47:04 GMT</lastBuildDate><atom:link href="http://localhost:2373/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</title><description>使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。</description><link>http://localhost:2373/review-hrm/</link><guid isPermaLink="false">5ea3fc552410164c084c86ff</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Sat, 25 Apr 2020 09:05:40 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" medium="image"/><content:encoded>&lt;!--kg-card-begin: markdown--&gt;&lt;blockquote&gt;
 &lt;img src="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" alt="退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統"&gt;&lt;p&gt;四個月的役期到現在剩下七週時間，長時間在兵營裡，也逐漸遺忘了一些技術，因此在最後的這段時間，利用每週短暫放假的一天半，對一些技術進行複習。這裏將會使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MariaDB)。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="springsecurity"&gt;壹 ｜Spring Security 安全架構&lt;/h2&gt;
@@ -353,6 +353,64 @@ public class DbUserDetailsService implements UserDetailsService {
     }
 }
 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;創建一個 WebSecurityConfig&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    private DbUserDetailsService dbUserDetailsService;
+
+    @Autowired
+    public void setDbUserDetailsService(DbUserDetailsService dbUserDetailsService) {
+        this.dbUserDetailsService = dbUserDetailsService;
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers(&amp;quot;/&amp;quot;).permitAll()
+                .antMatchers(&amp;quot;/user/**&amp;quot;).hasAuthority(&amp;quot;USER&amp;quot;)
+                .and()
+                .formLogin().loginPage(&amp;quot;/login&amp;quot;).defaultSuccessUrl(&amp;quot;/user&amp;quot;)
+                .and()
+                .logout().logoutUrl(&amp;quot;/logout&amp;quot;).logoutSuccessUrl(&amp;quot;/login&amp;quot;);
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder builder) throws Exception{
+        builder.userDetailsService(dbUserDetailsService);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;建立啟動類和配置文件&lt;/strong&gt;&lt;br&gt;
+建立 &lt;code&gt;App&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class App {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;建立配置文件 &lt;code&gt;application.properties&lt;/code&gt; 於 &lt;code&gt;src/main/resources&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-properties"&gt;spring.thymeleaf.cache=false
+
+spring.datasource.url=jdbc:mysql://localhost:3306/hrm?useUnicode=true&amp;amp;characterEncoding=utf8mb4
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=Aa941211
+
+jpa.hibernate.ddl-auto:update
+jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
 &lt;/code&gt;&lt;/pre&gt;
 &lt;!--kg-card-end: markdown--&gt;</content:encoded></item><item><title>通過 Google Cloud 架設電商系統</title><description>之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄</description><link>http://localhost:2373/online-store-on-google/</link><guid isPermaLink="false">5e8596e66946432460d37edf</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Thu, 02 Apr 2020 07:47:21 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" medium="image"/><content:encoded>&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統"&gt;&lt;p&gt;之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄：&lt;/p&gt;&lt;blockquote&gt;題外話：在 Google Cloud上選擇最低配置的系統，居然可以免費架設？另，本項目最終的 ip 地址是 34.80.79.144，下文中其他的 ip 地址是其他項目或架設於其他服務商的 ip 地址。&lt;/blockquote&gt;&lt;p&gt;在創建完一個作業系統為 CentOS 7.0 的實例後，就可以通過網頁端的 ssh 方法直接登陸操作這個伺服器了。但個人習慣採用 Mac 的 Terminal 來進行伺服器管理，因為這樣在複製和文件傳輸上比較方便。因此，接下來將介紹如何通過 ssh 命令登陸伺服器：&lt;/p&gt;&lt;h2 id="-ssh-"&gt;通過 ssh 命令登陸伺服器&lt;/h2&gt;&lt;p&gt;Google 官方在文檔中介紹的方法，是通過設定公私鑰，匹配登陸系統，但是 Google 沒有提供實例級 ssh 密鑰設定，因此直接修改伺服器系統的配置文件比較快。&lt;/p&gt;&lt;ol&gt;&lt;li&gt;首先通過瀏覽器端登陸伺服器，並切換至 root 帳戶&lt;/li&gt;&lt;/ol&gt;&lt;figure class="kg-card kg-image-card"&gt;&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200402_1.png" class="kg-image" alt="通過 Google Cloud 架設電商系統"&gt;&lt;/figure&gt;&lt;p&gt;之後輸入以下命令：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;sudo -i&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2. 設置 root 密碼&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;passwd root&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3. 打開 sshd_config 配置文件&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;vi /etc/ssh/sshd_config&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;4. 修改配置內容&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;PermitRootLogin yes           
 PasswordAuthentication yes&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;5. 重啓伺服器&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;reboot&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在此之後就可以通過 ssh 命令登陸伺服器的 root 用戶了。&lt;/p&gt;&lt;h2 id="-"&gt;環境配置&lt;/h2&gt;&lt;p&gt;通过 ssh 登录服务器之后，首先要创建一个新的账号：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;useradd davis
