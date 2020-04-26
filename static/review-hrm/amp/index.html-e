@@ -18,7 +18,7 @@
     <meta property="og:url" content="http://localhost:2373/review-hrm/">
     <meta property="og:image" content="http://localhost:2373/content/images/2020/04/Snip20200425_2.png">
     <meta property="article:published_time" content="2020-04-25T09:05:40.000Z">
-    <meta property="article:modified_time" content="2020-04-25T09:39:46.000Z">
+    <meta property="article:modified_time" content="2020-04-26T05:30:13.000Z">
     <meta property="article:tag" content="侬好，Java Dev">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
@@ -64,7 +64,7 @@
     "headline": "退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統",
     "url": "http://localhost:2373/review-hrm/",
     "datePublished": "2020-04-25T09:05:40.000Z",
-    "dateModified": "2020-04-25T09:39:46.000Z",
+    "dateModified": "2020-04-26T05:30:13.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:2373/content/images/2020/04/Snip20200425_2.png",
@@ -116,7 +116,7 @@
             <section class="post-content">
 
                 <blockquote>
-<p>四個月的役期到現在剩下七週時間，長時間在兵營裡，也逐漸遺忘了一些技術，因此在最後的這段時間，利用每週短暫放假的一天半，對一些技術進行複習。這裏將會使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。</p>
+<p>四個月的役期到現在剩下七週時間，長時間在兵營裡，也逐漸遺忘了一些技術，因此在最後的這段時間，利用每週短暫放假的一天半，對一些技術進行複習。這裏將會使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MariaDB)。</p>
 </blockquote>
 <h2 id="springsecurity">壹 ｜Spring Security 安全架構</h2>
 <p>Spring Security 是一種針對企業系統訪問時的安全問題，進行安全管理的一種架構，主要可以控制如：密碼加密、表單安全管理、驗證、命名空間安全管理等操作。該項目將只會採用一些最基本的功能，對該項目進行一些安全保護。</p>
@@ -254,6 +254,222 @@ create table `user` (
     &lt;/pluginManagement&gt;
   &lt;/build&gt;
 &lt;/project&gt;
+</code></pre>
+<p>而後創建一個簡單的實體類 <code>UserDO</code>：</p>
+<pre><code class="language-java">package pers.dc.entity;
+
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user")
+@Data
+public class UserDO {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String username;
+
+    private String password;
+
+    private String nickname;
+}
+</code></pre>
+<p><strong>DAO 層</strong><br>
+並建立一個 <code>UserRepository</code> 接口用來進行復用，減少重複代碼：</p>
+<pre><code class="language-java">package pers.dc.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import pers.dc.entity.UserDO;
+
+@Repository
+public interface UserRepository extends CrudRepository&lt;UserDO, Long&gt; {
+
+    UserDO findByUsername(String username);
+}
+</code></pre>
+<p><strong>Service層</strong><br>
+建立 <code>UserService</code>:</p>
+<pre><code class="language-java">package pers.dc.service;
+
+import pers.dc.entity.UserDO;
+
+public interface UserService {
+    void insert(UserDO userDO);
+    UserDO getByUsername(String username);
+}
+</code></pre>
+<p>之後建立一個 Service 接口：</p>
+<pre><code class="language-java">package pers.dc.service.impl;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
+import org.springframework.security.crypto.scrypt.SCryptPasswordEncoder;
+import pers.dc.entity.UserDO;
+import pers.dc.repository.UserRepository;
+import pers.dc.service.UserService;
+import sun.security.util.Password;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+public class BaseUserService implements UserService {
+
+    private final static Map&lt;Integer, String&gt; ENCODER_TYPE = new HashMap&lt;&gt;();
+    private final static Map&lt;String, PasswordEncoder&gt; ENCODER_MAP = new HashMap&lt;&gt;();
+    private final static String PASSWORD_FORMAT = "{%s}%s";
+    private final UserRepository userRepository;
+
+    public BaseUserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    static {
+        ENCODER_TYPE.put(0, "noop");
+        ENCODER_TYPE.put(1, "bcrypt");
+        ENCODER_TYPE.put(2, "pbkdf2");
+        ENCODER_TYPE.put(3, "scrypt");
+        ENCODER_TYPE.put(4, "sha256");
+        ENCODER_MAP.put("noop", NoOpPasswordEncoder.getInstance());
+        ENCODER_MAP.put("bcrypt", new BCryptPasswordEncoder());
+        ENCODER_MAP.put("pbkdf2", new Pbkdf2PasswordEncoder());
+        ENCODER_MAP.put("scrypt", new SCryptPasswordEncoder());
+        ENCODER_MAP.put("sha256", new StandardPasswordEncoder());
+    }
+
+    @Override
+    public void insert(UserDO userDO) {
+        String username = userDO.getUsername();
+        if (exist(username))
+            throw new RuntimeException("用戶名已經存在!");
+
+        Random random = new Random();
+        int x = random.nextInt(5);
+        String encoderType = ENCODER_TYPE.get(x);
+        PasswordEncoder passwordEncoder = ENCODER_MAP.get(encoderType);
+        userDO.setPassword(String.format(PASSWORD_FORMAT, encoderType,
+                passwordEncoder.encode(userDO.getPassword())));
+        userRepository.save(userDO);
+    }
+
+    @Override
+    public UserDO getByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+    private boolean exist(String username) {
+        UserDO userDO = userRepository.findByUsername(username);
+        return userDO != null;
+    }
+}
+</code></pre>
+<p>這裏分別提供了這幾種加密方式：noop、bcrypt、pbkdf2、scrypt、sha256。</p>
+<p><strong>Controller層</strong><br>
+新建一個 <code>UserController</code> :</p>
+<pre><code class="language-java">package pers.dc.controller;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.security.Principal;
+
+@Controller
+public class UserController {
+
+    @GetMapping("/user")
+    public String user(@AuthenticationPrincipal Principal principal, Model model) {
+        model.addAttribute("username", principal.getName());
+        return "user/user";
+    }
+}
+</code></pre>
+<p><code>@AuthenticationPrincipal</code> 註解可以獲取保存在 session 中登陸用戶的信息，這樣就可以獲取登陸後的 username 了。</p>
+<p>新建 <code>HomeController</code>類：</p>
+<pre><code class="language-java">package pers.dc.controller;
+
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import pers.dc.entity.UserDO;
+import pers.dc.service.UserService;
+
+@Controller
+@AllArgsConstructor
+public class HomeController {
+
+    private final UserService userService;
+
+    @GetMapping({"/", "/index", "home"})
+    public String root() {
+        return "index";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @GetMapping("/register")
+    public String register() {
+        return "register";
+    }
+
+    @PostMapping("register")
+    public String doRegister(UserDO userDO) {
+        userService.insert(userDO);
+        return "redirect:register?success";
+    }
+}
+</code></pre>
+<p><strong>Config層</strong><br>
+創建一個 <code>DbUserDetailsService</code> 來管理整個項目配置：</p>
+<pre><code class="language-java">package pers.dc.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import pers.dc.entity.UserDO;
+import pers.dc.service.UserService;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class DbUserDetailsService implements UserDetailsService {
+
+    private final UserService userService;
+
+    @Autowired
+    DbUserDetailsService(UserService userService) {
+        this.userService = userService;
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        UserDO userDO = userService.getByUsername(username);
+        if (userDO == null)
+            throw new UsernameNotFoundException("用戶不存在！");
+        List&lt;SimpleGrantedAuthority&gt; simpleGrantedAuthorities = new ArrayList&lt;&gt;();
+        simpleGrantedAuthorities.add(new SimpleGrantedAuthority("USER"));
+        return new org.springframework.security.core.userdetails.User(
+                userDO.getUsername(), userDO.getPassword(), simpleGrantedAuthorities);
+    }
+}
+
 </code></pre>
 
 

@@ -1,5 +1,5 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Davis Ching</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2373/</link><image><url>http://localhost:2373/favicon.png</url><title>Davis Ching</title><link>http://localhost:2373/</link></image><generator>Ghost 3.1</generator><lastBuildDate>Sat, 25 Apr 2020 09:40:10 GMT</lastBuildDate><atom:link href="http://localhost:2373/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</title><description>使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。</description><link>http://localhost:2373/review-hrm/</link><guid isPermaLink="false">5ea3fc552410164c084c86ff</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Sat, 25 Apr 2020 09:05:40 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" medium="image"/><content:encoded>&lt;!--kg-card-begin: markdown--&gt;&lt;blockquote&gt;
-&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" alt="退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統"&gt;&lt;p&gt;四個月的役期到現在剩下七週時間，長時間在兵營裡，也逐漸遺忘了一些技術，因此在最後的這段時間，利用每週短暫放假的一天半，對一些技術進行複習。這裏將會使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Davis Ching</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2373/</link><image><url>http://localhost:2373/favicon.png</url><title>Davis Ching</title><link>http://localhost:2373/</link></image><generator>Ghost 3.1</generator><lastBuildDate>Sun, 26 Apr 2020 05:33:31 GMT</lastBuildDate><atom:link href="http://localhost:2373/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</title><description>使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。</description><link>http://localhost:2373/review-hrm/</link><guid isPermaLink="false">5ea3fc552410164c084c86ff</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Sat, 25 Apr 2020 09:05:40 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" medium="image"/><content:encoded>&lt;!--kg-card-begin: markdown--&gt;&lt;blockquote&gt;
+&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200425_2.png" alt="退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統"&gt;&lt;p&gt;四個月的役期到現在剩下七週時間，長時間在兵營裡，也逐漸遺忘了一些技術，因此在最後的這段時間，利用每週短暫放假的一天半，對一些技術進行複習。這裏將會使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MariaDB)。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="springsecurity"&gt;壹 ｜Spring Security 安全架構&lt;/h2&gt;
 &lt;p&gt;Spring Security 是一種針對企業系統訪問時的安全問題，進行安全管理的一種架構，主要可以控制如：密碼加密、表單安全管理、驗證、命名空間安全管理等操作。該項目將只會採用一些最基本的功能，對該項目進行一些安全保護。&lt;/p&gt;
@@ -137,6 +137,222 @@ create table `user` (
     &amp;lt;/pluginManagement&amp;gt;
   &amp;lt;/build&amp;gt;
 &amp;lt;/project&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而後創建一個簡單的實體類 &lt;code&gt;UserDO&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc.entity;
+
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = &amp;quot;user&amp;quot;)
+@Data
+public class UserDO {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String username;
+
+    private String password;
+
+    private String nickname;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;DAO 層&lt;/strong&gt;&lt;br&gt;
+並建立一個 &lt;code&gt;UserRepository&lt;/code&gt; 接口用來進行復用，減少重複代碼：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import pers.dc.entity.UserDO;
+
+@Repository
+public interface UserRepository extends CrudRepository&amp;lt;UserDO, Long&amp;gt; {
+
+    UserDO findByUsername(String username);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Service層&lt;/strong&gt;&lt;br&gt;
+建立 &lt;code&gt;UserService&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc.service;
+
+import pers.dc.entity.UserDO;
+
+public interface UserService {
+    void insert(UserDO userDO);
+    UserDO getByUsername(String username);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;之後建立一個 Service 接口：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc.service.impl;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
+import org.springframework.security.crypto.scrypt.SCryptPasswordEncoder;
+import pers.dc.entity.UserDO;
+import pers.dc.repository.UserRepository;
+import pers.dc.service.UserService;
+import sun.security.util.Password;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+public class BaseUserService implements UserService {
+
+    private final static Map&amp;lt;Integer, String&amp;gt; ENCODER_TYPE = new HashMap&amp;lt;&amp;gt;();
+    private final static Map&amp;lt;String, PasswordEncoder&amp;gt; ENCODER_MAP = new HashMap&amp;lt;&amp;gt;();
+    private final static String PASSWORD_FORMAT = &amp;quot;{%s}%s&amp;quot;;
+    private final UserRepository userRepository;
+
+    public BaseUserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    static {
+        ENCODER_TYPE.put(0, &amp;quot;noop&amp;quot;);
+        ENCODER_TYPE.put(1, &amp;quot;bcrypt&amp;quot;);
+        ENCODER_TYPE.put(2, &amp;quot;pbkdf2&amp;quot;);
+        ENCODER_TYPE.put(3, &amp;quot;scrypt&amp;quot;);
+        ENCODER_TYPE.put(4, &amp;quot;sha256&amp;quot;);
+        ENCODER_MAP.put(&amp;quot;noop&amp;quot;, NoOpPasswordEncoder.getInstance());
+        ENCODER_MAP.put(&amp;quot;bcrypt&amp;quot;, new BCryptPasswordEncoder());
+        ENCODER_MAP.put(&amp;quot;pbkdf2&amp;quot;, new Pbkdf2PasswordEncoder());
+        ENCODER_MAP.put(&amp;quot;scrypt&amp;quot;, new SCryptPasswordEncoder());
+        ENCODER_MAP.put(&amp;quot;sha256&amp;quot;, new StandardPasswordEncoder());
+    }
+
+    @Override
+    public void insert(UserDO userDO) {
+        String username = userDO.getUsername();
+        if (exist(username))
+            throw new RuntimeException(&amp;quot;用戶名已經存在!&amp;quot;);
+
+        Random random = new Random();
+        int x = random.nextInt(5);
+        String encoderType = ENCODER_TYPE.get(x);
+        PasswordEncoder passwordEncoder = ENCODER_MAP.get(encoderType);
+        userDO.setPassword(String.format(PASSWORD_FORMAT, encoderType,
+                passwordEncoder.encode(userDO.getPassword())));
+        userRepository.save(userDO);
+    }
+
+    @Override
+    public UserDO getByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+    private boolean exist(String username) {
+        UserDO userDO = userRepository.findByUsername(username);
+        return userDO != null;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;這裏分別提供了這幾種加密方式：noop、bcrypt、pbkdf2、scrypt、sha256。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Controller層&lt;/strong&gt;&lt;br&gt;
+新建一個 &lt;code&gt;UserController&lt;/code&gt; :&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc.controller;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.security.Principal;
+
+@Controller
+public class UserController {
+
+    @GetMapping(&amp;quot;/user&amp;quot;)
+    public String user(@AuthenticationPrincipal Principal principal, Model model) {
+        model.addAttribute(&amp;quot;username&amp;quot;, principal.getName());
+        return &amp;quot;user/user&amp;quot;;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;@AuthenticationPrincipal&lt;/code&gt; 註解可以獲取保存在 session 中登陸用戶的信息，這樣就可以獲取登陸後的 username 了。&lt;/p&gt;
+&lt;p&gt;新建 &lt;code&gt;HomeController&lt;/code&gt;類：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc.controller;
+
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import pers.dc.entity.UserDO;
+import pers.dc.service.UserService;
+
+@Controller
+@AllArgsConstructor
+public class HomeController {
+
+    private final UserService userService;
+
+    @GetMapping({&amp;quot;/&amp;quot;, &amp;quot;/index&amp;quot;, &amp;quot;home&amp;quot;})
+    public String root() {
+        return &amp;quot;index&amp;quot;;
+    }
+
+    @GetMapping(&amp;quot;/login&amp;quot;)
+    public String login() {
+        return &amp;quot;login&amp;quot;;
+    }
+
+    @GetMapping(&amp;quot;/register&amp;quot;)
+    public String register() {
+        return &amp;quot;register&amp;quot;;
+    }
+
+    @PostMapping(&amp;quot;register&amp;quot;)
+    public String doRegister(UserDO userDO) {
+        userService.insert(userDO);
+        return &amp;quot;redirect:register?success&amp;quot;;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Config層&lt;/strong&gt;&lt;br&gt;
+創建一個 &lt;code&gt;DbUserDetailsService&lt;/code&gt; 來管理整個項目配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-java"&gt;package pers.dc.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+import pers.dc.entity.UserDO;
+import pers.dc.service.UserService;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class DbUserDetailsService implements UserDetailsService {
+
+    private final UserService userService;
+
+    @Autowired
+    DbUserDetailsService(UserService userService) {
+        this.userService = userService;
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        UserDO userDO = userService.getByUsername(username);
+        if (userDO == null)
+            throw new UsernameNotFoundException(&amp;quot;用戶不存在！&amp;quot;);
+        List&amp;lt;SimpleGrantedAuthority&amp;gt; simpleGrantedAuthorities = new ArrayList&amp;lt;&amp;gt;();
+        simpleGrantedAuthorities.add(new SimpleGrantedAuthority(&amp;quot;USER&amp;quot;));
+        return new org.springframework.security.core.userdetails.User(
+                userDO.getUsername(), userDO.getPassword(), simpleGrantedAuthorities);
+    }
+}
+
 &lt;/code&gt;&lt;/pre&gt;
 &lt;!--kg-card-end: markdown--&gt;</content:encoded></item><item><title>通過 Google Cloud 架設電商系統</title><description>之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄</description><link>http://localhost:2373/online-store-on-google/</link><guid isPermaLink="false">5e8596e66946432460d37edf</guid><category>侬好，Java Dev</category><dc:creator>Davis · 景詩維 </dc:creator><pubDate>Thu, 02 Apr 2020 07:47:21 GMT</pubDate><media:content url="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" medium="image"/><content:encoded>&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統"&gt;&lt;p&gt;之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄：&lt;/p&gt;&lt;blockquote&gt;題外話：在 Google Cloud上選擇最低配置的系統，居然可以免費架設？另，本項目最終的 ip 地址是 34.80.79.144，下文中其他的 ip 地址是其他項目或架設於其他服務商的 ip 地址。&lt;/blockquote&gt;&lt;p&gt;在創建完一個作業系統為 CentOS 7.0 的實例後，就可以通過網頁端的 ssh 方法直接登陸操作這個伺服器了。但個人習慣採用 Mac 的 Terminal 來進行伺服器管理，因為這樣在複製和文件傳輸上比較方便。因此，接下來將介紹如何通過 ssh 命令登陸伺服器：&lt;/p&gt;&lt;h2 id="-ssh-"&gt;通過 ssh 命令登陸伺服器&lt;/h2&gt;&lt;p&gt;Google 官方在文檔中介紹的方法，是通過設定公私鑰，匹配登陸系統，但是 Google 沒有提供實例級 ssh 密鑰設定，因此直接修改伺服器系統的配置文件比較快。&lt;/p&gt;&lt;ol&gt;&lt;li&gt;首先通過瀏覽器端登陸伺服器，並切換至 root 帳戶&lt;/li&gt;&lt;/ol&gt;&lt;figure class="kg-card kg-image-card"&gt;&lt;img src="http://localhost:2373/content/images/2020/04/Snip20200402_1.png" class="kg-image" alt="通過 Google Cloud 架設電商系統"&gt;&lt;/figure&gt;&lt;p&gt;之後輸入以下命令：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;sudo -i&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2. 設置 root 密碼&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;passwd root&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3. 打開 sshd_config 配置文件&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;vi /etc/ssh/sshd_config&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;4. 修改配置內容&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;PermitRootLogin yes           
 PasswordAuthentication yes&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;5. 重啓伺服器&lt;/p&gt;&lt;pre&gt;&lt;code class="language-terminal"&gt;reboot&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在此之後就可以通過 ssh 命令登陸伺服器的 root 用戶了。&lt;/p&gt;&lt;h2 id="-"&gt;環境配置&lt;/h2&gt;&lt;p&gt;通过 ssh 登录服务器之后，首先要创建一个新的账号：&lt;/p&gt;&lt;pre&gt;&lt;code class="language-cmd"&gt;useradd davis
