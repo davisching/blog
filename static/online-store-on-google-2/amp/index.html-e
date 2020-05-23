@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>通過 Google Cloud 架設電商系統(壹)</title>
+    <title>通過 Google Cloud 架設電商系統(貳)</title>
 
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -13,20 +13,20 @@
     
     <meta property="og:site_name" content="Davis Ching">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="通過 Google Cloud 架設電商系統(壹)">
-    <meta property="og:description" content="之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄">
-    <meta property="og:url" content="http://localhost:2373/online-store-on-google/">
-    <meta property="og:image" content="http://localhost:2373/content/images/2020/04/Snip20200328_1.png">
-    <meta property="article:published_time" content="2020-04-02T07:47:21.000Z">
-    <meta property="article:modified_time" content="2020-05-23T13:41:14.000Z">
+    <meta property="og:title" content="通過 Google Cloud 架設電商系統(貳)">
+    <meta property="og:description" content="在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。">
+    <meta property="og:url" content="http://localhost:2373/online-store-on-google-2/">
+    <meta property="og:image" content="http://localhost:2373/content/images/2020/05/Snip20200328_1.png">
+    <meta property="article:published_time" content="2020-05-23T14:12:20.000Z">
+    <meta property="article:modified_time" content="2020-05-23T14:57:48.000Z">
     <meta property="article:tag" content="侬好，Java Dev">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="通過 Google Cloud 架設電商系統(壹)">
-    <meta name="twitter:description" content="之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄">
-    <meta name="twitter:url" content="http://localhost:2373/online-store-on-google/">
-    <meta name="twitter:image" content="http://localhost:2373/content/images/2020/04/Snip20200328_1.png">
+    <meta name="twitter:title" content="通過 Google Cloud 架設電商系統(貳)">
+    <meta name="twitter:description" content="在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。">
+    <meta name="twitter:url" content="http://localhost:2373/online-store-on-google-2/">
+    <meta name="twitter:image" content="http://localhost:2373/content/images/2020/05/Snip20200328_1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Davis · 景詩維 ">
     <meta name="twitter:label2" content="Filed under">
@@ -61,18 +61,18 @@
         "url": "http://localhost:2373/author/davis/",
         "sameAs": []
     },
-    "headline": "通過 Google Cloud 架設電商系統(壹)",
-    "url": "http://localhost:2373/online-store-on-google/",
-    "datePublished": "2020-04-02T07:47:21.000Z",
-    "dateModified": "2020-05-23T13:41:14.000Z",
+    "headline": "通過 Google Cloud 架設電商系統(貳)",
+    "url": "http://localhost:2373/online-store-on-google-2/",
+    "datePublished": "2020-05-23T14:12:20.000Z",
+    "dateModified": "2020-05-23T14:57:48.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2373/content/images/2020/04/Snip20200328_1.png",
+        "url": "http://localhost:2373/content/images/2020/05/Snip20200328_1.png",
         "width": 1888,
         "height": 1242
     },
     "keywords": "侬好，Java Dev",
-    "description": "之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄",
+    "description": "在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2373/"
@@ -104,77 +104,29 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">通過 Google Cloud 架設電商系統(壹)</h1>
+                <h1 class="post-title">通過 Google Cloud 架設電商系統(貳)</h1>
                 <section class="post-meta">
                     <p class="author">by <a href="../../author/davis/">Davis · 景詩維 </a></p>
-                    <time class="post-date" datetime="2020-04-02">2020-04-02</time>
+                    <time class="post-date" datetime="2020-05-23">2020-05-23</time>
                 </section>
             </header>
             <figure class="post-image">
-                <amp-img src="http://localhost:2373/content/images/2020/04/Snip20200328_1.png" width="600" height="400" layout="responsive"></amp-img>
+                <amp-img src="http://localhost:2373/content/images/2020/05/Snip20200328_1.png" width="600" height="400" layout="responsive"></amp-img>
             </figure>
             <section class="post-content">
 
-                <p>之前有嘗試過在阿里雲將一個 Spring Boot - Mybatis 架構的系統，通過 CentOS 上的 Tomcat 架設一個電商系統。現在將嘗試在 Google Cloud 的 Compute Engine 上架設同一套系統，以下是對這一過程的紀錄：</p><blockquote>題外話：在 Google Cloud上選擇最低配置的系統，居然可以免費架設？另，本項目最終的 ip 地址是 34.80.79.144，下文中其他的 ip 地址是其他項目或架設於其他服務商的 ip 地址。</blockquote><p>在創建完一個作業系統為 CentOS 7.0 的實例後，就可以通過網頁端的 ssh 方法直接登陸操作這個伺服器了。但個人習慣採用 Mac 的 Terminal 來進行伺服器管理，因為這樣在複製和文件傳輸上比較方便。因此，接下來將介紹如何通過 ssh 命令登陸伺服器：</p><h2 id="-ssh-">通過 ssh 命令登陸伺服器</h2><p>Google 官方在文檔中介紹的方法，是通過設定公私鑰，匹配登陸系統，但是 Google 沒有提供實例級 ssh 密鑰設定，因此直接修改伺服器系統的配置文件比較快。</p><ol><li>首先通過瀏覽器端登陸伺服器，並切換至 root 帳戶</li></ol><figure class="kg-card kg-image-card"></figure><p>之後輸入以下命令：</p><pre><code class="language-terminal">sudo -i</code></pre><p>2. 設置 root 密碼</p><pre><code class="language-terminal">passwd root</code></pre><p>3. 打開 sshd_config 配置文件</p><pre><code class="language-terminal">vi /etc/ssh/sshd_config</code></pre><p>4. 修改配置內容</p><pre><code class="language-terminal">PermitRootLogin yes           
-PasswordAuthentication yes</code></pre><p>5. 重啓伺服器</p><pre><code class="language-terminal">reboot</code></pre><p>在此之後就可以通過 ssh 命令登陸伺服器的 root 用戶了。</p><h2 id="-">環境配置</h2><p>通过 ssh 登录服务器之后，首先要创建一个新的账号：</p><pre><code class="language-cmd">useradd davis
-passwd davis</code></pre><h1 id="-jdk">安装 JDK</h1><p>然后需要检查是否有安装 jdk：</p><pre><code class="language-cmd">java -version</code></pre><p>如需卸载重装的话：</p><pre><code> rpm -qa|grep openjdk -i
- rpm -e --nodeps 需要删除的软件</code></pre><h2 id="--1">开始安装</h2><p>1. 新建安装目录</p><pre><code class="language-cmd">mkdir /usr/java</code></pre><p>2. 上传安装包至目录并解压安装</p><p>到官网下载最新的 jdk ，然后上传至服务器，这里可以使用 ftp 工具，如 FileZilla。或直接使用以下 scp 命令, 如：</p><pre><code class="language-cmd">scp /Users/jasmine/Downloads/jdk-13.0.2_linux-x64_bin.tar.gz root@106.15.194.214:/home/admin/downloads</code></pre><p>解压 jdk 压缩包：</p><pre><code class="language-cmd">tar -zxvf jdk-13.0.2_linux-x64_bin.tar.gz</code></pre><p>而后移至 jdk 安装位置：</p><pre><code class="language-cmd">mv jdk-13.0.2/ /usr/java/</code></pre><p>3. 配置环境变量</p><p>编辑 profile 文件：</p><pre><code class="language-cmd">vim /etc/profile</code></pre><p>在 profile 文件的末尾添加：</p><pre><code class="language-cmd">export JAVA_HOME=/usr/java/jdk-13.0.2
-export CLASSPATH=.:%JAVA_HOME%/lib/dt.jar:%JAVA_HOME%/lib/tools.jar
-export PATH=$PATH:$JAVA_HOME/bin</code></pre><p>刷新 profile 完成安装</p><pre><code class="language-cmd">source /etc/profile</code></pre><h1 id="-tomcat">部署第一台 Tomcat</h1><p>之后的版本中，会采用  ngnix 来部署这些项目。但现在先采用两个 Tomcat 来分别部署前端和后端：第一台服务器将被部署至  192.168.1.81，储存前端项目；第二台服务器被部署至 192.168.1.82，维护后端；另采用 192.168.1.91 端口部署  MariaDB 作为数据库，要做到内网互通。</p><h2 id="-tomcat-1">安装 Tomcat</h2><p>下载、上传、解压 Tomcat 安装包，然后重命名并移动至安装位置。</p><pre><code class="language-cmd">## 重命名
-mv apache-tomcat-9.0.30 tomcat-frontend
+                <p>在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。</p><blockquote>另，本項目暫時為單體項目，之後將會通過 redis 轉換為集群項目，分布式加強，並最後通過 Spring Cloud改造成為微服務。</blockquote><p>在移植開始之前，可以先做以下準備：</p><ul><li>將儲存於本地 MySQL 伺服器的電商系統數據庫，通過 MySQL Workbench 等工具，移植到伺服器環境下的 MariaDB 中。</li><li>如果項目沒有提前部署多環境 profile，那麼這時候就可以建立 <strong>application-dev.yml</strong>  與 <strong>applcation-prod.yml </strong>來區分開發環境與生產環境的配置文件。</li><li>而後將前端與後段中，代碼中需要更改的域名，更改為伺服器的 IP 地址。（在這個例子中，IP 地址為 34.80.79.144）同時，CROS 跨域域名以及靜態文件儲存地址等也要進行設定。</li><li>移除掉 spring-boot-starter-tomcat 的依賴，因為伺服器中使用外建 tomcat。但是移除後，將會造成一些 servlet 功能的卻是，於是需要補充添加 javax.servlet-api 依賴。</li></ul><p><strong>創建War包啟動類</strong></p><p>由於這個項目採用 war 包形式，於是正常的 <em>Application</em> 啟動類會出問題，於是這裡添加一個 <em>WarStarterApplication</em> 來作為生產環境中的啟動類。其代碼如下：</p><pre><code class="language-java">package pers.dc.ols;
 
-## 移动至安装位置
-mv tomcat-frontend/ /usr/local/</code></pre><p>然后进入Tomcat的 bin文件夹，通过startup.sh启动 Tomcat，就可以使用服务了。<strong>注意：要采用任何端口，都需要检查云服务器的防火墙是否允许访问这个端口</strong>。如 Tomcat 的默认端口 8080，就需要在服务器中开启，并允许其访问。</p><figure class="kg-card kg-image-card kg-width-wide"></figure><p>在开启后，访问：公网ip:8080 就可以访问到 Tomcat 的欢迎页面了。</p><figure class="kg-card kg-image-card"></figure><h1 id="-tomcat-2">第二台 Tomcat</h1><p>通过与部署第一台一样的方法，部署第二台名为 tomcat-api 的服务器至同一位置(/usr/local)。但是需要修改这台服务器的默认端口号：</p><p>1. 进入conf文件下，并修改 server.xml 文件。修改端口8080，至其他数字，如 8088。（可输入 /8080 查找）：</p><pre><code class="language-xml">&lt;Connector port="8088" protocol="HTTP/1.1"
-               connectionTimeout="20000"
-               redirectPort="8443" /&gt;</code></pre><p>2. 找到服务器关闭端口 8005，并修改他为其他数字，如8015。</p><pre><code class="language-xml">&lt;Server port="8015" shutdown="SHUTDOWN"&gt;</code></pre><p>3. 修改 AJP Connector 的端口 8009, 为8019。</p><pre><code class="language-xml">&lt;Connector port="8019" protocol="AJP/1.3" redirectPort="8443" /&gt;
-</code></pre><h2 id="--2">状况处理</h2><p>注意：访问的时候会碰到一些问题，可以通过以下方法查看端口的状况：</p><pre><code class="language-cmd">netstat -an | grep 8080</code></pre><p>第一次访问端口时，会奇慢无比，可以通过以下两行代码改进：</p><pre><code class="language-cmd">yum install -y rng-tools
-systemctl start rngd</code></pre><p>以上两行代码的功效就是安装一个工具，去处理阿里云服务器中的某个速度奇慢的运算过程，具体详情请参考 <a href="https://blog.csdn.net/u013361107/article/details/80826092">https://blog.csdn.net/u013361107/article/details/80826092</a>。</p><h1 id="-mariadb">安装 MariaDB</h1><p>MariaDB 提供了自动安装，以下是官網上自動安裝的方法：</p><p>Here is your custom MariaDB YUM repository entry for CentOS. Copy and  paste it into a file under /etc/yum.repos.d/ (we suggest naming the  file MariaDB.repo or something similar).</p><pre><code class="language-cmd"># MariaDB 10.4 CentOS repository list - created 2020-04-05 06:36 UTC
-# http://downloads.mariadb.org/mariadb/repositories/
-[mariadb]
-name = MariaDB
-baseurl = http://yum.mariadb.org/10.4/centos7-amd64
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1</code></pre><p>After the file is in place, install MariaDB with:</p><pre><code class="language-cmd">sudo yum install MariaDB-server MariaDB-client</code></pre><p>這裏按照官方的步驟，一定會出錯。需要自行 google 查找解決方法。這裏可以選擇的方法有：</p><pre><code class="language-cmd">yum install mariadb*
-chown -R mysql:mysql /var/lib/mysql/</code></pre><blockquote>可採用  yum remove mariadb 卸載，具體深度卸載可參考 <a href="https://blog.csdn.net/chengyuqiang/article/details/80210416">https://blog.csdn.net/chengyuqiang/article/details/80210416</a></blockquote><p>之後就參考下文中的【3】配置数据库 與 【4】开启远程连接 繼續操作即可。</p><figure class="kg-card kg-image-card kg-card-hascaption"><figcaption>看到 MariaDB 出現就安裝成功了</figcaption></figure><h2 id="--3">手動安裝</h2><p>如果自動安裝有問題的話，以下是手动安装的步骤：</p><p>1. 下载 MariaDB 各安装包</p><p>进入官网，并使用其 <a href="https://downloads.mariadb.org/mariadb/repositories/">Repository Configuration Tool</a>. 选择好操作系统和使用版本，如 CentOS ▶ CentOS 7 (x86_64) ▶ 10.4 [Stable] ▶ (下方链接) baseurl = <a href="http://yum.mariadb.org/10.4/centos7-amd64">http://yum.mariadb.org/10.4/centos7-amd64</a>  ▶ rpms/ ▶ 然后下载以下安装包，并上传至服务器：</p><ul><li>jemalloc-3.6.0-1.el7.x86_64.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-client.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-compat.rpm</li><li>galera-25.3.19-1.rhel7.el7.centos.x86_64.rpm</li><li>jemalloc-devel-3.6.0-1.el7.x86_64.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-common.rpm</li><li>MariaDB-10.1.21-centos7-x86_64-server.rpm</li></ul><p>（版本号按需改变，如有疑问，请参考：<a href="https://mariadb.com/kb/en/mariadb-installation-version-10121-via-rpms-on-centos-7/">https://mariadb.com/kb/en/mariadb-installation-version-10121-via-rpms-on-centos-7/</a>）</p><p>2. 安装 MairaDB 所需依赖 (版本号自行调整)</p><pre><code class="language-cmd">yum install rsync nmap lsof perl-DBI nc
-rpm -ivh jemalloc-3.6.0-1.el7.x86_64.rpm
-rpm -ivh jemalloc-devel-3.6.0-1.el7.x86_64.rpm
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-# 解决冲突
-rpm -qa | grep mariadb-libs
-# 冲突文件：mariadb-libs-xxxxxx
-rpm -ev --nodeps rpm -ev --nodeps mariadb-libs-xxxxxx
-yum install boost-devel.x86_64
+public class WarStarterApplication extends SpringBootServletInitializer {
 
-# 导入MariaDB的key
-rpm --import http://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-
-rpm -ivh galera-4-26.4.3-1.rhel7.el7.centos.x86_64.rpm
-
-# 安装 libaio (此步骤在安装 10.4.8 的时候需要)
-wget http://mirror.centos.org/centos/6/os/x86_64/Packages/libaio-0.3.107-10.el6.x86_64.rpm
-
-rpm -ivh libaio-0.3.107-10.el6.x86_64.rpm
-
-yum install openssl-libs
-
-# 安装 核心包
-rpm -ivh MariaDB-common-10.4.11-1.el7.centos.x86_64.rpm MariaDB-compat-10.4.11-1.el7.centos.x86_64.rpm MariaDB-client-10.4.11-1.el7.centos.x86_64.rpm MariaDB-server-10.4.11-1.el7.centos.x86_64.rpm</code></pre><p>3. 配置数据库</p><p>安装完毕之后，需要配置数据库：</p><pre><code class="language-cmd">systemctl start mariadb
-
-# 可用以下命令开启开机启动
-systemctl enable mariadb
-
-mysql_secure_installation</code></pre><p>之后根据以下表回答系统问题：</p><pre><code>1.输入当前密码，初次安装后是没有密码的，直接回车
-2.询问是否使用`unix_socket`进行身份验证：n
-3.为root设置密码：y
-4.输入root的新密码：root
-5.确认输入root的新密码：root
-6.是否移除匿名用户，这个随意，建议删除：y
-7.拒绝用户远程登录，这个建议开启：n
-8.删除test库，可以保留：n
-9.重新加载权限表：y</code></pre><p>4. 开启远程连接</p><pre><code>mysql -u root -p 
-
-grant all privileges on *.* to 'root'@'%' identified by 'root密码';
-flush privileges;</code></pre><p></p>
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(Application.class);
+    }
+}</code></pre><p><strong>進行打包</strong></p><p>之後對 maven 項目進行 install，項目的 pom 文件就會生成至啟動類所在文件夾中的 <em>target 文件夾 </em>中。而後可以通過 ftp 工具，或者採用 scp 命令，將 war 包上傳至伺服器中 api-tomcat 的 webapp 文件夾中，命令示例：</p><pre><code class="language-bash">scp /Users/jasmine/Desktop/ols-api.war root@34.80.79.144:/usr/local/tomcat-api/webapps/ols-api.war</code></pre><p></p>
 
             </section>
 

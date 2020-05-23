@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=2e48d3575f">
+    <link rel="stylesheet" type="text/css" href="../../assets/built/screen.css?v=c42c2fd42d">
 
     <meta name="description" content="该区块记录了Java开发的各类复习笔记与开发过程纪录，方便自己复习，并提高之后的开发速度。">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
@@ -180,11 +180,56 @@
         <div class="post-feed">
                 <article class="post-card post tag-hello-java-dev ">
 
+    <a class="post-card-image-link" href="../../online-store-on-google-2/">
+        <img class="post-card-image" srcset="../../content/images/size/w300/2020/05/Snip20200328_1.png 300w,
+                   ../../content/images/size/w600/2020/05/Snip20200328_1.png 600w,
+                  ../../content/images/size/w1000/2020/05/Snip20200328_1. png 1000w,
+                 ../../content/images/size/w2000/2020/05/Snip20200328_1.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/05/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統(貳)">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../../online-store-on-google-2/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">侬好，Java Dev</span>
+                <h2 class="post-card-title">通過 Google Cloud 架設電商系統(貳)</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Davis · 景詩維 
+                    </div>
+
+                        <a href="../../author/davis/" class="static-avatar">
+                            <img class="author-profile-image" src="../../content/images/size/w100/2019/12/Snip20191217_3.png" alt="Davis · 景詩維 ">
+                        </a>
+                </li>
+            </ul>
+
+            <span class="post-date">Saturday May 23 2020</span>
+        </footer>
+
+    </div>
+
+</article>
+                <article class="post-card post tag-hello-java-dev ">
+
     <a class="post-card-image-link" href="../../review-hrm/">
         <img class="post-card-image" srcset="../../content/images/size/w300/2020/04/Snip20200425_2.png 300w,
                    ../../content/images/size/w600/2020/04/Snip20200425_2.png 600w,
                   ../../content/images/size/w1000/2020/04/Snip20200425_2. png 1000w,
-                 ../../content/images/size/w2000/2020/04/Snip20200425_2.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/04/Snip20200425_2.png" alt="退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統">
+                 ../../content/images/size/w2000/2020/04/Snip20200425_2.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/04/Snip20200425_2.png" alt="練手 Spring Boot 與 Vue.js 實現簡易人事管理系統">
     </a>
 
     <div class="post-card-content">
@@ -193,7 +238,7 @@
 
             <header class="post-card-header">
                     <span class="post-card-tags">侬好，Java Dev</span>
-                <h2 class="post-card-title">退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</h2>
+                <h2 class="post-card-title">練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</h2>
             </header>
 
             <section class="post-card-excerpt">
@@ -229,7 +274,7 @@
         <img class="post-card-image" srcset="../../content/images/size/w300/2020/04/Snip20200328_1.png 300w,
                    ../../content/images/size/w600/2020/04/Snip20200328_1.png 600w,
                   ../../content/images/size/w1000/2020/04/Snip20200328_1. png 1000w,
-                 ../../content/images/size/w2000/2020/04/Snip20200328_1.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/04/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統">
+                 ../../content/images/size/w2000/2020/04/Snip20200328_1.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../../content/images/size/w600/2020/04/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統(壹)">
     </a>
 
     <div class="post-card-content">
@@ -238,7 +283,7 @@
 
             <header class="post-card-header">
                     <span class="post-card-tags">侬好，Java Dev</span>
-                <h2 class="post-card-title">通過 Google Cloud 架設電商系統</h2>
+                <h2 class="post-card-title">通過 Google Cloud 架設電商系統(壹)</h2>
             </header>
 
             <section class="post-card-excerpt">
@@ -435,9 +480,9 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=2e48d3575f"></script>
+    <script type="text/javascript" src="../../assets/built/jquery.fitvids.js?v=c42c2fd42d"></script>
 
-    <script src="../../assets/built/infinitescroll.js?v=2e48d3575f"></script>
+    <script src="../../assets/built/infinitescroll.js?v=c42c2fd42d"></script>
 
     
 

@@ -8,7 +8,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=2e48d3575f">
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=c42c2fd42d">
 
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="canonical" href="index.html">
@@ -304,13 +304,13 @@ flush privileges;</code></pre>
 </div>
                     <div class="read-next-card-content">
                         <ul>
-                            <li><a href="../review-hrm/">退伍七週複習計畫 一之 練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</a></li>
-                            <li><a href="../online-store-on-google/">通過 Google Cloud 架設電商系統</a></li>
-                            <li><a href="../distributed-system-01/">分散式系統 - 學習筆記 - 壹</a></li>
+                            <li><a href="../online-store-on-google-2/">通過 Google Cloud 架設電商系統(貳)</a></li>
+                            <li><a href="../review-hrm/">練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</a></li>
+                            <li><a href="../online-store-on-google/">通過 Google Cloud 架設電商系統(壹)</a></li>
                         </ul>
                     </div>
                     <footer class="read-next-card-footer">
-                        <a href="../tag/hello-java-dev/">See all 4 posts →</a>
+                        <a href="../tag/hello-java-dev/">See all 5 posts →</a>
                     </footer>
                 </article>
 
@@ -467,7 +467,7 @@ flush privileges;</code></pre>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=2e48d3575f"></script>
+    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=c42c2fd42d"></script>
 
 
     <script>

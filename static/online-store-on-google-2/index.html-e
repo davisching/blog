@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>[解决] MySQL数据库时区问题</title>
+    <title>通過 Google Cloud 架設電商系統(貳)</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,27 +17,27 @@
     
     <meta property="og:site_name" content="Davis Ching">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="[解决] MySQL数据库时区问题">
-    <meta property="og:description" content="在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。">
-    <meta property="og:url" content="http://localhost:2373/solve-mysql-time-zone/">
-    <meta property="og:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg">
-    <meta property="article:published_time" content="2018-12-23T08:41:00.000Z">
-    <meta property="article:modified_time" content="2020-01-31T11:57:33.000Z">
-    <meta property="article:tag" content="吃我一套「解决拳」！">
+    <meta property="og:title" content="通過 Google Cloud 架設電商系統(貳)">
+    <meta property="og:description" content="在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。">
+    <meta property="og:url" content="http://localhost:2373/online-store-on-google-2/">
+    <meta property="og:image" content="http://localhost:2373/content/images/2020/05/Snip20200328_1.png">
+    <meta property="article:published_time" content="2020-05-23T14:12:20.000Z">
+    <meta property="article:modified_time" content="2020-05-23T14:57:48.000Z">
+    <meta property="article:tag" content="侬好，Java Dev">
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="[解决] MySQL数据库时区问题">
-    <meta name="twitter:description" content="在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。">
-    <meta name="twitter:url" content="http://localhost:2373/solve-mysql-time-zone/">
-    <meta name="twitter:image" content="http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg">
+    <meta name="twitter:title" content="通過 Google Cloud 架設電商系統(貳)">
+    <meta name="twitter:description" content="在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。">
+    <meta name="twitter:url" content="http://localhost:2373/online-store-on-google-2/">
+    <meta name="twitter:image" content="http://localhost:2373/content/images/2020/05/Snip20200328_1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Davis · 景詩維 ">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="吃我一套「解决拳」！">
+    <meta name="twitter:data2" content="侬好，Java Dev">
     <meta name="twitter:site" content="@tryghost">
-    <meta property="og:image:width" content="1920">
-    <meta property="og:image:height" content="1080">
+    <meta property="og:image:width" content="1888">
+    <meta property="og:image:height" content="1242">
     
     <script type="application/ld+json">
 {
@@ -65,18 +65,18 @@
         "url": "http://localhost:2373/author/davis/",
         "sameAs": []
     },
-    "headline": "[解决] MySQL数据库时区问题",
-    "url": "http://localhost:2373/solve-mysql-time-zone/",
-    "datePublished": "2018-12-23T08:41:00.000Z",
-    "dateModified": "2020-01-31T11:57:33.000Z",
+    "headline": "通過 Google Cloud 架設電商系統(貳)",
+    "url": "http://localhost:2373/online-store-on-google-2/",
+    "datePublished": "2020-05-23T14:12:20.000Z",
+    "dateModified": "2020-05-23T14:57:48.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2373/content/images/2019/12/thumb-1920-87489.jpg",
-        "width": 1920,
-        "height": 1080
+        "url": "http://localhost:2373/content/images/2020/05/Snip20200328_1.png",
+        "width": 1888,
+        "height": 1242
     },
-    "keywords": "吃我一套「解决拳」！",
-    "description": "在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。",
+    "keywords": "侬好，Java Dev",
+    "description": "在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2373/"
@@ -126,7 +126,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/tomorrow-night-eighties.min.css" rel="stylesheet">
 
 </head>
-<body class="post-template tag-problem-solved-yeah">
+<body class="post-template tag-hello-java-dev">
     <div class="site-wrapper">
         <header class="site-header outer no-image">
     <div class="inner">
@@ -193,32 +193,37 @@
 
 <main id="site-main" class="site-main outer">
     <div class="inner">
-        <article class="post-full post tag-problem-solved-yeah ">
+        <article class="post-full post tag-hello-java-dev ">
             <figure class="post-hero-image">
                 <div class="post-hero-image-title">
                     <section class="post-full-meta">
-                        <time class="post-full-meta-date" datetime="2018-12-23">23 December 2018</time>
-                            <span class="date-divider">/</span> <a href="../tag/problem-solved-yeah/">吃我一套「解决拳」！</a>
+                        <time class="post-full-meta-date" datetime="2020-05-23">23 May 2020</time>
+                            <span class="date-divider">/</span> <a href="../tag/hello-java-dev/">侬好，Java Dev</a>
                     </section>
-                    <h1 class="post-full-title">[解决] MySQL数据库时区问题</h1>
+                    <h1 class="post-full-title">通過 Google Cloud 架設電商系統(貳)</h1>
                 </div>
-                <img srcset="../content/images/size/w300/2019/12/thumb-1920-87489.jpg 300w,
-                           ../content/images/size/w600/2019/12/thumb-1920-87489.jpg 600w,
-                          ../content/images/size/w1000/2019/12/thumb-1920-87489.jpg 1000w,
-                         ../content/images/size/w2000/2019/12/thumb-1920-87489.jpg 2000w" sizes="(max-width: 800px) 400px,
+                <img srcset="../content/images/size/w300/2020/05/Snip20200328_1.png 300w,
+                           ../content/images/size/w600/2020/05/Snip20200328_1.png 600w,
+                          ../content/images/size/w1000/2020/05/Snip20200328_1. png 1000w,
+                         ../content/images/size/w2000/2020/05/Snip20200328_1.pngpng 2000w" sizes="(max-width: 800px) 400px,
                             (max-width: 1170px) 700px,
-                            1400px" src="../content/images/size/w2000/2019/12/thumb-1920-87489.jpg" alt="[解决] MySQL数据库时区问题">
+                            1400px" src="../content/images/size/w2000/2020/05/Snip20200328_1.png" alt="通過 Google Cloud 架設電商系統(貳)">
             </figure>
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <!--kg-card-begin: markdown--><blockquote>
-<p>在开发时，会碰到数据库、逻辑层与服务器时区不统一的问题。这会导致保存的时间在显示的时候出现差错，以下是在 Spring Boot 中，指定 MySQL 时区的方法。</p>
-</blockquote>
-<pre><code class="language-xml">url: jdbc:mysql://localhost:3306/ols?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;serverTimezone=GMT%2B8
-</code></pre>
-<p>添加 ：<code>serverTimezone=GMT%2B8</code></p>
-<!--kg-card-end: markdown-->
+                    <p>在上一階段，我們分別在 Google Cloud 伺服器上佈署了 Java 環境，安裝了兩台 Tomcat，並且部署了 MariaDB。接下來將會介紹，如何將本地已經開發好的項目，打包並移植到伺服器當中。</p><blockquote>另，本項目暫時為單體項目，之後將會通過 redis 轉換為集群項目，分布式加強，並最後通過 Spring Cloud改造成為微服務。</blockquote><p>在移植開始之前，可以先做以下準備：</p><ul><li>將儲存於本地 MySQL 伺服器的電商系統數據庫，通過 MySQL Workbench 等工具，移植到伺服器環境下的 MariaDB 中。</li><li>如果項目沒有提前部署多環境 profile，那麼這時候就可以建立 <strong>application-dev.yml</strong>  與 <strong>applcation-prod.yml </strong>來區分開發環境與生產環境的配置文件。</li><li>而後將前端與後段中，代碼中需要更改的域名，更改為伺服器的 IP 地址。（在這個例子中，IP 地址為 34.80.79.144）同時，CROS 跨域域名以及靜態文件儲存地址等也要進行設定。</li><li>移除掉 spring-boot-starter-tomcat 的依賴，因為伺服器中使用外建 tomcat。但是移除後，將會造成一些 servlet 功能的卻是，於是需要補充添加 javax.servlet-api 依賴。</li></ul><p><strong>創建War包啟動類</strong></p><p>由於這個項目採用 war 包形式，於是正常的 <em>Application</em> 啟動類會出問題，於是這裡添加一個 <em>WarStarterApplication</em> 來作為生產環境中的啟動類。其代碼如下：</p><pre><code class="language-java">package pers.dc.ols;
+
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+public class WarStarterApplication extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(Application.class);
+    }
+}</code></pre><p><strong>進行打包</strong></p><p>之後對 maven 項目進行 install，項目的 pom 文件就會生成至啟動類所在文件夾中的 <em>target 文件夾 </em>中。而後可以通過 ftp 工具，或者採用 scp 命令，將 war 包上傳至伺服器中 api-tomcat 的 webapp 文件夾中，命令示例：</p><pre><code class="language-bash">scp /Users/jasmine/Desktop/ols-api.war root@34.80.79.144:/usr/local/tomcat-api/webapps/ols-api.war</code></pre><p></p>
                 </div>
             </section>
 
@@ -250,90 +255,46 @@
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
-                <article class="read-next-card" style="background-image: url(http://localhost:2368/content/images/2019/12/thumb-1920-302344-1.jpg)">
+                <article class="read-next-card" style="background-image: url(../content/images/size/w600/2020/01/thumb-1920-657227.jpg)">
                     <header class="read-next-card-header">
                         <small class="read-next-card-header-sitetitle">— Davis Ching —</small>
-                        <h3 class="read-next-card-header-title"><a href="../tag/problem-solved-yeah/">吃我一套「解决拳」！</a></h3>
+                        <h3 class="read-next-card-header-title"><a href="../tag/hello-java-dev/">侬好，Java Dev</a></h3>
                     </header>
                     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
 </div>
                     <div class="read-next-card-content">
                         <ul>
-                            <li><a href="../host-key-verification-failed/">[解决]ssh 时 Host key verification failed</a></li>
-                            <li><a href="../solve-table-configuration-users-matched-more-than-one-table-mybatis-generator/">[解决] Table Configuration users matched more than one table (Mybatis Generator)</a></li>
+                            <li><a href="../review-hrm/">練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</a></li>
+                            <li><a href="../online-store-on-google/">通過 Google Cloud 架設電商系統(壹)</a></li>
+                            <li><a href="../distributed-system-01/">分散式系統 - 學習筆記 - 壹</a></li>
                         </ul>
                     </div>
                     <footer class="read-next-card-footer">
-                        <a href="../tag/problem-solved-yeah/">See all 2 posts →</a>
+                        <a href="../tag/hello-java-dev/">See all 5 posts →</a>
                     </footer>
                 </article>
 
-                <article class="post-card post tag-getting-started ">
 
-    <a class="post-card-image-link" href="../publishing-options/">
-        <img class="post-card-image" srcset="https://static.ghost.org/v3.0.0/images/publishing-options.png 300w,
-                    https://static.ghost.org/v3.0.0/images/publishing-options.png 600w,
-                    https://static.ghost.org/v3.0.0/images/publishing-options.png 1000w,
-                    https://static.ghost.org/v3.0.0/images/publishing-options.png 2000w" sizes="(max-width: 1000px) 400px, 700px" src="https://static.ghost.org/v3.0.0/images/publishing-options.png" alt="Publishing options">
+                <article class="post-card post tag-hello-java-dev ">
+
+    <a class="post-card-image-link" href="../review-hrm/">
+        <img class="post-card-image" srcset="../content/images/size/w300/2020/04/Snip20200425_2.png 300w,
+                   ../content/images/size/w600/2020/04/Snip20200425_2.png 600w,
+                  ../content/images/size/w1000/2020/04/Snip20200425_2. png 1000w,
+                 ../content/images/size/w2000/2020/04/Snip20200425_2.pngpng 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2020/04/Snip20200425_2.png" alt="練手 Spring Boot 與 Vue.js 實現簡易人事管理系統">
     </a>
 
     <div class="post-card-content">
 
-        <a class="post-card-content-link" href="../publishing-options/">
+        <a class="post-card-content-link" href="../review-hrm/">
 
             <header class="post-card-header">
-                    <span class="post-card-tags">官方文章</span>
-                <h2 class="post-card-title">Publishing options</h2>
+                    <span class="post-card-tags">侬好，Java Dev</span>
+                <h2 class="post-card-title">練手 Spring Boot 與 Vue.js 實現簡易人事管理系統</h2>
             </header>
 
             <section class="post-card-excerpt">
-                <p>The Ghost editor post settings menu has everything you need to fully optimise and distribute your content effectively.</p>
-            </section>
-
-        </a>
-
-        <footer class="post-card-meta">
-
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        Ghost
-                    </div>
-
-                        <a href="../author/ghost/" class="static-avatar">
-                            <img class="author-profile-image" src="https://static.ghost.org/v3.0.0/images/ghost.png" alt="Ghost">
-                        </a>
-                </li>
-            </ul>
-
-            <span class="post-date">Monday December 16 2019</span>
-        </footer>
-
-    </div>
-
-</article>
-
-                <article class="post-card post tag-problem-solved-yeah ">
-
-    <a class="post-card-image-link" href="../solve-table-configuration-users-matched-more-than-one-table-mybatis-generator/">
-        <img class="post-card-image" srcset="../content/images/size/w300/2019/12/thumb-1920-706619.jpg 300w,
-                   ../content/images/size/w600/2019/12/thumb-1920-706619.jpg 600w,
-                  ../content/images/size/w1000/2019/12/thumb-1920-706619.jpg 1000w,
-                 ../content/images/size/w2000/2019/12/thumb-1920-706619.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2019/12/thumb-1920-706619.jpg" alt="[解决] Table Configuration users matched more than one table (Mybatis Generator)">
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="../solve-table-configuration-users-matched-more-than-one-table-mybatis-generator/">
-
-            <header class="post-card-header">
-                    <span class="post-card-tags">吃我一套「解决拳」！</span>
-                <h2 class="post-card-title">[解决] Table Configuration users matched more than one table (Mybatis Generator)</h2>
-            </header>
-
-            <section class="post-card-excerpt">
-                <p>解决了 SpringBoot 开发时，Mybatis Generator中同名表问题。</p>
+                <p>使用 Spring Boot 與 Vue.js 實現一個簡易的人事管理系統 (資料庫採用 MySQL)。</p>
             </section>
 
         </a>
@@ -353,7 +314,7 @@
                 </li>
             </ul>
 
-            <span class="post-date">Sunday December 23 2018</span>
+            <span class="post-date">Saturday April 25 2020</span>
         </footer>
 
     </div>
@@ -371,16 +332,16 @@
         </a>
     </div>
     <span class="floating-header-divider">—</span>
-    <div class="floating-header-title">[解决] MySQL数据库时区问题</div>
+    <div class="floating-header-title">通過 Google Cloud 架設電商系統(貳)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%5B%E8%A7%A3%E5%86%B3%5D%20MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E5%8C%BA%E9%97%AE%E9%A2%98&amp;url=http://localhost:2373/solve-mysql-time-zone/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%E9%80%9A%E9%81%8E%20Google%20Cloud%20%E6%9E%B6%E8%A8%AD%E9%9B%BB%E5%95%86%E7%B3%BB%E7%B5%B1(%E8%B2%B3)&amp;url=http://localhost:2373/online-store-on-google-2/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2373/solve-mysql-time-zone/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2373/online-store-on-google-2/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
         </a>
     </div>
